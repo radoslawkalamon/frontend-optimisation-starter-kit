@@ -1,59 +1,75 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en" prefix="og: http://ogp.me/ns#">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Web Dev Insider - site to optimise - homepage</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Web Dev Insider demo page for learning purposes.">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Web Dev Insider demo page for learning purposes." />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex, nofollow" />
 
-    <link href="/assets/css/homework/app.css" rel="stylesheet">
-    <link media="none" onload="if(media!='all')media='all'" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/assets/css/homework/app.css" rel="stylesheet" />
+    <link media="none" onload="if(media!='all')media='all'" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
 
-    <link href="/favicon.ico" rel="icon">
+    <link href="/favicon.ico" rel="icon" />
 
     <script src="https://js.stripe.com/v3/"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500" rel="stylesheet" />
     <script src="//use.typekit.net/lna1ryl.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
+    <script>
+      try {
+        Typekit.load();
+      } catch (e) {}
+    </script>
 
     <script src="/assets/js/homework/vendor/jquery/dist/jquery.min.js"></script>
-    <script>var media_url = '/assets/', site_url = '/';$(document).load().scrollTop(0);</script>
+    <script>
+      var media_url = "/assets/",
+        site_url = "/";
+      $(document).load().scrollTop(0);
+    </script>
     <script data-main="/assets/js/homework/home" src="/assets/js/homework/vendor/requirejs/require.js"></script>
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TGDSWZ8');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TGDSWZ8");
+    </script>
     <!-- End Google Tag Manager -->
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-      (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
       })();
     </script>
     <!--End of Tawk.to Script-->
   </head>
   <body>
-
     <div class="overlay"></div>
     <div class="search">
       <div class="layout3 text text--bg-grey">
         <a class="btn-close search__btn-close" href="javascript:;">Close</a>
         <p>Search and hit enter</p>
         <form action="/search" method="get">
-          <input type="text" name="phrase" id="phrase" placeholder="What are you looking for?">
+          <input type="text" name="phrase" id="phrase" placeholder="What are you looking for?" />
           <button class="search__submit" type="submit" title="Submit">Search</button>
         </form>
       </div>
@@ -61,7 +77,7 @@
 
     <nav class="l-navbar">
       <a class="logo" href="/">
-        <img src="/assets/images/homework/logo.svg" width="120" height="58" alt="Web Dev Insider" title="Web Dev Insider">
+        <img src="/assets/images/homework/logo.svg" width="120" height="58" alt="Web Dev Insider" title="Web Dev Insider" />
       </a>
 
       <ul class="navbar-menu">
@@ -70,7 +86,9 @@
         <li class="navbar-menu__dropdown"><a id="item-3" href="#">Services</a></li>
         <li><a title="Log in" href="/">Log in</a></li>
         <li><a title="Contact" href="/">Contact</a></li>
-        <li><a class="navbar-menu__search js-open-searchbar" href="#" title="What are you looking for?"><span>Search</span></a></li>
+        <li>
+          <a class="navbar-menu__search js-open-searchbar" href="#" title="What are you looking for?"><span>Search</span></a>
+        </li>
       </ul>
       <a title="Menu" class="l-navbar__burger" href="javascript:;">Menu</a>
     </nav>
@@ -97,8 +115,7 @@
             <div>
               <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="">White papers</a></div>
               <h2 class="headline-2">Some super interesting resource to download</h2>
-              <p class="small-text"><img src="/assets/images/homework/post.png" class="l-megamenu__image" alt=""> Just download it and enjoy.
-              </p>
+              <p class="small-text"><img src="/assets/images/homework/post.png" class="l-megamenu__image" alt="" /> Just download it and enjoy.</p>
               <p>
                 <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now: Ovum Report - Vodafone in-network call recording">Download now</a>
               </p>
@@ -132,8 +149,7 @@
             <div>
               <div class="item__category item__category--79 l-megamenu__cat"><a title="eBooks" href="/">eBooks</a></div>
               <h2 class="headline-2">PCI DSS and the contact center</h2>
-              <p class="small-text"><img src="/assets/images/homework/news-example.jpg" class="l-megamenu__image" alt=""> Some text is here so you are impressed and you will click the button below.
-              </p>
+              <p class="small-text"><img src="/assets/images/homework/news-example.jpg" class="l-megamenu__image" alt="" /> Some text is here so you are impressed and you will click the button below.</p>
               <p>
                 <a class="btn btn--bg-darkblue btn--border-blue" href="/2" title="Download now">Download now</a>
               </p>
@@ -152,8 +168,7 @@
             <div>
               <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="/">White papers</a></div>
               <h2 class="headline-2">Report about mobile payment gateways</h2>
-              <p class="small-text"><img src="/assets/images/homework/post2.png" class="l-megamenu__image" alt=""> An MNO service that doesn&#39;t require a SIM change
-              </p>
+              <p class="small-text"><img src="/assets/images/homework/post2.png" class="l-megamenu__image" alt="" /> An MNO service that doesn&#39;t require a SIM change</p>
               <p>
                 <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now">Download now</a>
               </p>
@@ -163,19 +178,25 @@
       </div>
     </div>
 
-    <header
-      class="l-home-banner"
-      style="background-image: url('/assets/images/homework/banner.png')">
+    <header class="l-home-banner" style="background-image: url('/assets/images/homework/banner.png');">
       <div class="layout">
         <div class="home-banner__content text">
-          <h1 class="headline-1">Seamless<br> payment option</h1>
+          <h1 class="headline-1">
+            Seamless<br />
+            payment option
+          </h1>
           <p>It is an online payment tool that makes collecting by Direct Debit easy for everyone from individuals to large cooperations at 1% fee per transaction.</p>
           <div class="l-home-banner__3-cols">
             <div>
               <p><strong>Cloud PCI Payment processing solution</strong></p>
             </div>
             <div>
-              <p><strong>Cloud voice<br> solution</strong></p>
+              <p>
+                <strong>
+                  Cloud voice<br />
+                  solution
+                </strong>
+              </p>
             </div>
             <div>
               <p><strong>Cloud Speech Analytics</strong></p>
@@ -211,7 +232,6 @@
         </ul>
       </div>
 
-
       <div class="mfp-hide popup-form-container" id="popup">
         <h2 class="headline-2">Payment Gateway demo</h2>
 
@@ -220,16 +240,16 @@
             <label for="name">
               Name
             </label>
-            <input id="name" name="name" type="text" placeholder="Jenny Rosen" required>
+            <input id="name" name="name" type="text" placeholder="Jenny Rosen" required />
           </div>
 
           <div class="form__row">
             <label for="email">
               Email Address
             </label>
-            <input id="email" name="email" type="email" placeholder="jenny.rosen@example.com" required>
+            <input id="email" name="email" type="email" placeholder="jenny.rosen@example.com" required />
           </div>
-        
+
           <div class="form__row">
             <label for="iban-element">
               IBAN
@@ -239,7 +259,7 @@
             </div>
           </div>
           <div id="bank-name"></div>
-        
+
           <button class="btn btn--bg-darkblue btn--border-blue" type="submit">Submit Payment</button>
         </form>
       </div>
@@ -259,13 +279,14 @@
           <section class="col-25 left">
             <div>
               <figure>
-                <img src="/assets/images/homework/i/slideshow/pci-compliance-45db.png" width="175" alt="">
+                <img src="/assets/images/homework/i/slideshow/pci-compliance-45db.png" width="175" alt="" />
               </figure>
-              <h2 class="headline-2">PCI<br />
+              <h2 class="headline-2">
+                PCI<br />
                 Compliance
               </h2>
               <p class="small-text">
-                Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. <br>
+                Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. <br />
                 <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
               </p>
             </div>
@@ -273,12 +294,11 @@
           <section class="col-25 left">
             <div>
               <figure>
-                <img src="/assets/images/homework/i/slideshow/call-recording-4d00.png" width="175" alt="">
+                <img src="/assets/images/homework/i/slideshow/call-recording-4d00.png" width="175" alt="" />
               </figure>
-              <h2 class="headline-2">Voice and data recording solutions
-              </h2>
+              <h2 class="headline-2">Voice and data recording solutions</h2>
               <p class="small-text">
-                  Vestibulum commodo volutpat a, convallis ac, laoreet enim.<br>
+                Vestibulum commodo volutpat a, convallis ac, laoreet enim.<br />
                 <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
               </p>
             </div>
@@ -286,12 +306,11 @@
           <section class="col-25 left">
             <div>
               <figure>
-                <img src="/assets/images/homework/i/slideshow/interaction-analytics-4124.png" width="175" alt="">
+                <img src="/assets/images/homework/i/slideshow/interaction-analytics-4124.png" width="175" alt="" />
               </figure>
-              <h2 class="headline-2">Interaction analytics solutions
-              </h2>
+              <h2 class="headline-2">Interaction analytics solutions</h2>
               <p class="small-text">
-                  Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus.<br>
+                Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus.<br />
                 <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
               </p>
             </div>
@@ -299,13 +318,14 @@
           <section class="col-25 left">
             <div>
               <figure>
-                <img src="/assets/images/homework/i/slideshow/platform-cloud-enabled-f7b0.png" width="175" alt="">
+                <img src="/assets/images/homework/i/slideshow/platform-cloud-enabled-f7b0.png" width="175" alt="" />
               </figure>
-              <h2 class="headline-2">Platform
-                <br><span class="headline-2__smaller"> cloud-enabled solutions</span>
+              <h2 class="headline-2">
+                Platform <br />
+                <span class="headline-2__smaller"> cloud-enabled solutions</span>
               </h2>
               <p class="small-text">
-                  Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu.<br>
+                Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu.<br />
                 <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
               </p>
             </div>
@@ -315,7 +335,10 @@
       <!-- // -->
       <div class="page-section page-section--global-map page-section--global-map__home page-section--triangle-white">
         <div class="layout">
-          <h3 class="headline-3">Global cloud-based solution <br>for your online business.</h3>
+          <h3 class="headline-3">
+            Global cloud-based solution <br />
+            for your online business.
+          </h3>
         </div>
       </div>
       <!-- section with slider -->
@@ -330,7 +353,7 @@
             <div id="slider-features" class="text text--bg-grey">
               <section>
                 <figure>
-                  <img src="/assets/images/homework/i/slideshow/slider-capture-0f4c.png" alt="">
+                  <img src="/assets/images/homework/i/slideshow/slider-capture-0f4c.png" alt="" />
                 </figure>
                 <div>
                   <span class="headline-2 blue">Capture</span>
@@ -340,7 +363,7 @@
                     and interactions
                   </h3>
                   <p class="medium-text">
-                    Quisque cursus et, porttitor risus. 
+                    Quisque cursus et, porttitor risus.
                   </p>
                   <p>
                     <a title="Find out more" class="btn btn--bg-black btn--border-blue" href="/">Find out more</a>
@@ -349,7 +372,7 @@
               </section>
               <section>
                 <figure>
-                  <img src="/assets/images/homework/i/slideshow/slider-store-c81d.png" alt="">
+                  <img src="/assets/images/homework/i/slideshow/slider-store-c81d.png" alt="" />
                 </figure>
                 <div>
                   <span class="headline-2 green">Store</span>
@@ -368,7 +391,7 @@
               </section>
               <section>
                 <figure>
-                  <img src="/assets/images/homework/i/slideshow/slider-analyze-cbfa.png" alt="">
+                  <img src="/assets/images/homework/i/slideshow/slider-analyze-cbfa.png" alt="" />
                 </figure>
                 <div>
                   <span class="headline-2 orange">Analyze</span>
@@ -387,7 +410,7 @@
               </section>
               <section>
                 <figure>
-                  <img src="/assets/images/homework/i/slideshow/slider-consume-e378.png" alt="">
+                  <img src="/assets/images/homework/i/slideshow/slider-consume-e378.png" alt="" />
                 </figure>
                 <div>
                   <span class="headline-2 red">Consume</span>
@@ -396,7 +419,7 @@
                     integration
                   </h3>
                   <p class="medium-text">
-                      Lorem ipsum primis in nibh vel risus. Sed vel lectus.
+                    Lorem ipsum primis in nibh vel risus. Sed vel lectus.
                   </p>
                   <p>
                     <a title="Find out more" class="btn btn--bg-black btn--border-red" href="/">Find out more</a>
@@ -424,7 +447,8 @@
         <div class="layout">
           <section class="col-33 left">
             <div>
-              <h4 class="headline-2">Only pay for what<br />
+              <h4 class="headline-2">
+                Only pay for what<br />
                 you use
               </h4>
               <p class="medium-text">
@@ -434,7 +458,8 @@
           </section>
           <section class="col-33 left">
             <div>
-              <h4 class="headline-2">World leading<br />
+              <h4 class="headline-2">
+                World leading<br />
                 security
               </h4>
               <p class="medium-text">
@@ -447,7 +472,8 @@
           </section>
           <section class="col-33 left">
             <div>
-              <h4 class="headline-2">Truly global<br />
+              <h4 class="headline-2">
+                Truly global<br />
                 coverage
               </h4>
               <p class="medium-text">
@@ -468,7 +494,10 @@
           <div class="info-box">
             <div class="info-box__light text col-35 left">
               <div>
-                <p>In 2013, Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in, purus. Integer ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing.</p>
+                <p>
+                  In 2013, Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in,
+                  purus. Integer ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing.
+                </p>
                 <p><a class="btn btn--bg-white btn--border-blue" href="/">Our Accreditations</a></p>
               </div>
             </div>
@@ -491,7 +520,7 @@
                   </ul>
                 </div>
                 <div class="info-box__product-tour col-35 left">
-                  <img src="/assets/images/homework/slider-store.png" alt="">
+                  <img src="/assets/images/homework/slider-store.png" alt="" />
                   <a class="btn btn--bg-darkblue btn--border-blue popup" href="https://www.youtube.com/watch?v=KCK0PqiJbA0">Product Tour</a>
                 </div>
               </div>
@@ -501,32 +530,28 @@
       </article>
       <!-- // -->
       <!-- customers -->
-      <section 
-        class="page-section page-section--customers"
-        style="background-image: url('/assets/images/homework/bg-sec-customers.jpg')">
+      <section class="page-section page-section--customers" style="background-image: url('/assets/images/homework/bg-sec-customers.jpg');">
         <div class="layout">
           <div class="text text--bg-blue">
             <h3 class="headline-3">
-              Hundreds of customers.<br> 
+              Hundreds of customers.<br />
               One Platform.
             </h3>
           </div>
           <ul class="page-section--customers__logos">
-            <li><img src="/assets/images/homework/i/logos/gallery/viking-135-1246.jpg" alt=""></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/vodafone-135-1a70.jpg" alt=""></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/sse-135-4e83.jpg" alt=""></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/investec-135-6def.jpg" alt=""></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/cowen-group-135-ef66.jpg" alt=""></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/gatehouse-bank-135-d82b.jpg" alt=""></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/bgc-135-bb6b.jpg" alt=""></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/centrica-135-1f68.jpg" alt=""></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/itg-1352-5e17.jpg" alt=""></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/bmo-135-78f7.jpg" alt=""></li>
+            <li><img src="/assets/images/homework/i/logos/gallery/viking-135-1246.jpg" alt="" /></li>
+            <li><img src="/assets/images/homework/i/logos/gallery/vodafone-135-1a70.jpg" alt="" /></li>
+            <li><img src="/assets/images/homework/i/logos/gallery/sse-135-4e83.jpg" alt="" /></li>
+            <li><img src="/assets/images/homework/i/logos/gallery/investec-135-6def.jpg" alt="" /></li>
+            <li><img src="/assets/images/homework/i/logos/gallery/cowen-group-135-ef66.jpg" alt="" /></li>
+            <li><img src="/assets/images/homework/i/logos/gallery/gatehouse-bank-135-d82b.jpg" alt="" /></li>
+            <li><img src="/assets/images/homework/i/logos/gallery/bgc-135-bb6b.jpg" alt="" /></li>
+            <li><img src="/assets/images/homework/i/logos/gallery/centrica-135-1f68.jpg" alt="" /></li>
+            <li><img src="/assets/images/homework/i/logos/gallery/itg-1352-5e17.jpg" alt="" /></li>
+            <li><img src="/assets/images/homework/i/logos/gallery/bmo-135-78f7.jpg" alt="" /></li>
           </ul>
           <div class="text text--bg-blue page-section--customers__learn">
-            <p>
-              <strong>Learn how can help your business.</strong> <a title="Find out more" class="btn btn--bg-darkblue btn--border-blue" href="/">Find out more</a>
-            </p>
+            <p><strong>Learn how can help your business.</strong> <a title="Find out more" class="btn btn--bg-darkblue btn--border-blue" href="/">Find out more</a></p>
           </div>
         </div>
       </section>
@@ -538,19 +563,24 @@
         <div class="col-70 l-social-media__news-blog left">
           <div>
             <section class="l-home__news">
-              <h5 class="headline-6">News <span class="headline__see-all"><a title="See all news" href="/">See all news</a></span></h5>
+              <h5 class="headline-6">
+                News <span class="headline__see-all"><a title="See all news" href="/">See all news</a></span>
+              </h5>
               <div class="news-list news-list--home text">
                 <article>
                   <div>
                     <header>
-                      <div class="item__time-cat"><time datetime="2014-11-27T12:00">Nov 27, 2014</time><span class="item__cat"><a title="Events" href="/">Events</a></span></div>
+                      <div class="item__time-cat">
+                        <time datetime="2014-11-27T12:00">Nov 27, 2014</time><span class="item__cat"><a title="Events" href="/">Events</a></span>
+                      </div>
                       <h6 class="headline-7"><a href="/">Some event that happened on 2014 Amsterdam, Netherlands</a></h6>
                     </header>
                     <figure>
-                      <img src="/assets/images/homework/post3.png" alt="">
+                      <img src="/assets/images/homework/post3.png" alt="" />
                     </figure>
                     <p class="small-text">
-                      Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam.
+                      Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus
+                      lectus, pellentesque eget, bibendum a, gravida ullamcorper quam.
                     </p>
                     <p>
                       <a title="Read more" class="btn btn--bg-white btn--border-blue" href="">Read more</a>
@@ -560,14 +590,17 @@
                 <article>
                   <div>
                     <header>
-                      <div class="item__time-cat"><time datetime="2014-11-09T12:00">Nov 09, 2014</time><span class="item__cat"><a title="Events" href="/">Events</a></span></div>
+                      <div class="item__time-cat">
+                        <time datetime="2014-11-09T12:00">Nov 09, 2014</time><span class="item__cat"><a title="Events" href="/">Events</a></span>
+                      </div>
                       <h6 class="headline-7"><a href="/">Council Community Meeting 9-11 2014 Florida USA</a></h6>
                     </header>
                     <figure>
-                      <img src="/assets/images/homework/post4.png" alt="">
+                      <img src="/assets/images/homework/post4.png" alt="" />
                     </figure>
                     <p class="small-text">
-                      Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam.
+                      Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus
+                      lectus, pellentesque eget, bibendum a, gravida ullamcorper quam.
                     </p>
                     <p>
                       <a title="Read more" class="btn btn--bg-white btn--border-blue" href="">Read more</a>
@@ -577,14 +610,17 @@
                 <article>
                   <div>
                     <header>
-                      <div class="item__time-cat"><time datetime="2014-10-07T12:00">Oct 07, 2014</time><span class="item__cat"><a title="Events" href="">Events</a></span></div>
-                      <h6 class="headline-7"><a href="">European Community Meeting Maritim Hotel Berlin October 7-9, 2014  Berlin, Germany</a></h6>
+                      <div class="item__time-cat">
+                        <time datetime="2014-10-07T12:00">Oct 07, 2014</time><span class="item__cat"><a title="Events" href="">Events</a></span>
+                      </div>
+                      <h6 class="headline-7"><a href="">European Community Meeting Maritim Hotel Berlin October 7-9, 2014 Berlin, Germany</a></h6>
                     </header>
                     <figure>
-                      <img src="/assets/images/homework/post5.png" alt="">
+                      <img src="/assets/images/homework/post5.png" alt="" />
                     </figure>
                     <p class="small-text">
-                      Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam.
+                      Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus
+                      lectus, pellentesque eget, bibendum a, gravida ullamcorper quam.
                     </p>
                     <p>
                       <a title="Read more" class="btn btn--bg-white btn--border-blue" href="">Read more</a>
@@ -602,22 +638,34 @@
               <ul class="social-media social-media--white social-media--2-cols">
                 <li>
                   <a rel="external" title="Our profile at Twitter" href="">
-                  <span class="social-media__ico social-media__twitter"><span><span>Twitter</span></span></span> Twitter
+                    <span class="social-media__ico social-media__twitter">
+                      <span><span>Twitter</span></span>
+                    </span>
+                    Twitter
                   </a>
                 </li>
                 <li>
                   <a rel="external" title="Our profile at Google+" href="">
-                  <span class="social-media__ico social-media__gplus"><span><span>Google+</span></span></span> Google+
+                    <span class="social-media__ico social-media__gplus">
+                      <span><span>Google+</span></span>
+                    </span>
+                    Google+
                   </a>
                 </li>
                 <li>
                   <a rel="external" title="Our profile at Facebook" href="">
-                  <span class="social-media__ico social-media__facebook"><span><span>Facebook</span></span></span> Facebook
+                    <span class="social-media__ico social-media__facebook">
+                      <span><span>Facebook</span></span>
+                    </span>
+                    Facebook
                   </a>
                 </li>
                 <li>
                   <a rel="external" title="Our profile at LinkedIn" href="">
-                  <span class="social-media__ico social-media__linkedin"><span><span>LinkedIn</span></span></span> LinkedIn
+                    <span class="social-media__ico social-media__linkedin">
+                      <span><span>LinkedIn</span></span>
+                    </span>
+                    LinkedIn
                   </a>
                 </li>
               </ul>
@@ -632,7 +680,7 @@
       <div class="l-footer__top">
         <div class="layout">
           <div class="col-15 left">
-            <a title="Home" href="/"><img src="/assets/images/homework/logo.svg" alt="Web Dev Insider" width="141" height="42"></a>
+            <a title="Home" href="/"><img src="/assets/images/homework/logo.svg" alt="Web Dev Insider" width="141" height="42" /></a>
           </div>
           <div class="col-85 l-footer__top-links right">
             <ul>
@@ -715,22 +763,30 @@
                 <ul class="social-media social-media--blue">
                   <li>
                     <a rel="external" title="Our profile at Twitter" href="">
-                    <span class="social-media__ico social-media__twitter"><span><span>Twitter</span></span></span>
+                      <span class="social-media__ico social-media__twitter">
+                        <span><span>Twitter</span></span>
+                      </span>
                     </a>
                   </li>
                   <li>
                     <a rel="external" title="Our profile at Google+" href="">
-                    <span class="social-media__ico social-media__gplus"><span><span>Google+</span></span></span>
+                      <span class="social-media__ico social-media__gplus">
+                        <span><span>Google+</span></span>
+                      </span>
                     </a>
                   </li>
                   <li>
                     <a rel="external" title="Our profile at Facebook" href="">
-                    <span class="social-media__ico social-media__facebook"><span><span>Facebook</span></span></span>
+                      <span class="social-media__ico social-media__facebook">
+                        <span><span>Facebook</span></span>
+                      </span>
                     </a>
                   </li>
                   <li>
                     <a rel="external" title="Our profile at LinkedIn" href="">
-                    <span class="social-media__ico social-media__linkedin"><span><span>LinkedIn</span></span></span>
+                      <span class="social-media__ico social-media__linkedin">
+                        <span><span>LinkedIn</span></span>
+                      </span>
                     </a>
                   </li>
                 </ul>
@@ -742,8 +798,8 @@
       <div class="l-footer__bottom">
         <div class="layout">
           <div class="col-50 l-footer__bottom-copyright left">
-            <span>© 20XX Web Dev Insider page to optimise</span> 
-            <span><a title="Privacy &amp; Cookie policy" href="/">Privacy &amp; Cookie policy</a></span> 
+            <span>© 20XX Web Dev Insider page to optimise</span>
+            <span><a title="Privacy &amp; Cookie policy" href="/">Privacy &amp; Cookie policy</a></span>
           </div>
         </div>
       </div>
@@ -751,8 +807,7 @@
     <!-- // -->
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGDSWZ8"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGDSWZ8" height="0" width="0" style="display: none; visibility: hidden;"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
   </body>
 </html>
