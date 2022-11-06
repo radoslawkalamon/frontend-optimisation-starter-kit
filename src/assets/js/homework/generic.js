@@ -1,5 +1,5 @@
 require(['./main'], function (main) {
-
+	const site_url = "/";
 
 
 
