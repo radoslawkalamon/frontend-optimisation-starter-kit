@@ -41,10 +41,10 @@ const gulp                      = require('gulp'),
       dist_folder               = './dist/',
       dist_assets_folder        = dist_folder + 'assets/';
 
-gulp.task('clear', () => del([ dist_folder ]));
+gulp.task('clear', () => del([dist_folder]));
 
 gulp.task('html', () => {
-  return gulp.src([ src_folder + '**/*.html' ], {
+  return gulp.src([src_folder + '**/*.html'], {
     base: src_folder,
     since: gulp.lastRun('html')
   })
@@ -63,50 +63,56 @@ gulp.task('sass', (cb) => {
     src_assets_folder + 'sass/**/*.sass',
     src_assets_folder + 'scss/**/*.scss'
   ])
-  .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest(dist_assets_folder + 'css'));
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(dist_assets_folder + 'css'));
 
   cb();
 });
 
-gulp.task('purgecss', () => {
+gulp.task('css-purge', () => {
   return gulp.src(dist_assets_folder + 'css/**/*.css')
-      .pipe(purgecss({
-        content: [dist_folder + '*.html']
-      }))
-      .pipe(gulp.dest(dist_assets_folder + 'css'))
+    .pipe(purgecss({
+      content: [dist_folder + '*.html']
+    }))
+    .pipe(gulp.dest(dist_assets_folder + 'css'))
 })
 
+gulp.task('css-minify', () => {
+  return gulp.src(dist_assets_folder + 'css/**/*.css')
+    .pipe(minifyCss())
+    .pipe(gulp.dest(dist_assets_folder + 'css'))
+});
+
 gulp.task('js', () => {
-  return gulp.src([ src_assets_folder + 'js/**/*.js', '!' + src_assets_folder + 'js/homework/**/*.js' ], { since: gulp.lastRun('js') })
+  return gulp.src([src_assets_folder + 'js/**/*.js', '!' + src_assets_folder + 'js/homework/**/*.js'], { since: gulp.lastRun('js') })
     .pipe(plumber())
     .pipe(webpack({
       mode: 'production'
     }))
     .pipe(sourcemaps.init())
-      .pipe(babel({
-        presets: [ '@babel/env' ]
-      }))
-      .pipe(concat('all.js'))
-      .pipe(uglify())
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(concat('all.js'))
+    .pipe(uglify())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dist_assets_folder + 'js'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('js-copy', () => {
-  return gulp.src([ src_assets_folder + 'js/homework/**/*' ], { since: gulp.lastRun('js-copy') })
+  return gulp.src([src_assets_folder + 'js/homework/**/*'], { since: gulp.lastRun('js-copy') })
     .pipe(gulp.dest(dist_assets_folder + 'js/homework'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('js-minified', () => {
-  return gulp.src([ 
-    src_assets_folder + 'js/homework/*.js', 
+  return gulp.src([
+    src_assets_folder + 'js/homework/*.js',
     src_assets_folder + 'js/homework/components/*.js',
-    src_assets_folder + 'js/homework/vendor/*.js', 
-    src_assets_folder + 'js/homework/vendor/jquery/dist/*.js', 
-    src_assets_folder + 'js/homework/vendor/requirejs/*.js', 
+    src_assets_folder + 'js/homework/vendor/*.js',
+    src_assets_folder + 'js/homework/vendor/jquery/dist/*.js',
+    src_assets_folder + 'js/homework/vendor/requirejs/*.js',
   ], { since: gulp.lastRun('js-minified'), base: src_assets_folder + 'js/homework' })
     .pipe(uglify())
     .pipe(gulp.dest(dist_assets_folder + 'js/homework'))
@@ -114,26 +120,26 @@ gulp.task('js-minified', () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src([ src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|svg|ico)' ], { since: gulp.lastRun('images') })
+  return gulp.src([src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|svg|ico)'], { since: gulp.lastRun('images') })
     .pipe(plumber())
     .pipe(gulp.dest(dist_assets_folder + 'images'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('fonts', () => {
-  return gulp.src([ src_assets_folder + 'fonts/**/*' ], { since: gulp.lastRun('fonts') })
+  return gulp.src([src_assets_folder + 'fonts/**/*'], { since: gulp.lastRun('fonts') })
     .pipe(gulp.dest(dist_assets_folder + 'fonts'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('videos', () => {
-  return gulp.src([ src_assets_folder + 'videos/**/*' ], { since: gulp.lastRun('videos') })
+  return gulp.src([src_assets_folder + 'videos/**/*'], { since: gulp.lastRun('videos') })
     .pipe(gulp.dest(dist_assets_folder + 'videos'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('extra-files', () => {
-  return gulp.src([ src_folder + '*.txt', src_folder + '*.json', src_folder + '*.ico' ], { since: gulp.lastRun('extra-files') })
+  return gulp.src([src_folder + '*.txt', src_folder + '*.json', src_folder + '*.ico'], { since: gulp.lastRun('extra-files') })
     .pipe(gulp.dest(dist_folder))
     .pipe(browserSync.stream());
 });
@@ -185,18 +191,19 @@ gulp.task('generate-critical-css', (cb) => {
 });
 
 gulp.task(
-  'build', 
+  'build',
   gulp.series(
-    'clear', 
-    'html', /* replace the 'html' with 'html-minified' if you need minification */ 
-    'sass', 
-    'js', 
-    'js-copy', /* replace the 'js-copy' with 'js-minified' if you need minification */
-    'fonts', 
+    'clear',
+    'html-minified',
+    'sass',
+    'js',
+    'js-minified',
+    'fonts',
     'videos',
-    'extra-files', 
-    'images', 
-    /*'purgecss',*/
+    'extra-files',
+    'images',
+    'css-purge',
+    'css-minify',
     /*'generate-critical-css',*/
     /*'generate-service-worker',*/
   )
@@ -207,7 +214,7 @@ gulp.task('dev', gulp.series('html', 'sass', 'fonts', 'videos', 'extra-files', '
 gulp.task('serve', () => {
   return browserSync.init({
     server: {
-      baseDir: [ 'dist' ]
+      baseDir: ['dist']
     },
     port: 3000,
     open: false
