@@ -120,7 +120,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /**
@@ -456,6 +456,6 @@ ol {
 }
 
 ul,
- {
+ol {
   list-style-type: none;
 }
