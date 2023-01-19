@@ -1,5 +1,4 @@
-define(['components/domReady', 'components/flexbox_fallback', 'components/placeholders.min', 'components/magnific'], function (domReady, fallback, $twitter, $placeholders, $magnificPopup) {
-
+define(['jquery', 'magnific'], function ($, $magnificPopup) {
 	var global = {
 
 		megamenu: function () {
@@ -70,27 +69,6 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 				}
 
 			});
-
-			var currentPageIsContact = function () {
-				var currentURI = window.location.pathname;
-
-				if (currentURI.indexOf('/contact/') > -1) {
-					return true;
-				}
-				else {
-					return false;
-				}
-			}
-
-			// if contact item clicked
-			$('.js-contactItem').on('click', function () {
-
-				if (currentPageIsContact()) {
-					global.scrollToID('#form');
-					return false;
-				}
-			});
-
 
 			// close mega menu via clicking ESC
 			$(document).keyup(function (e) {
@@ -188,16 +166,6 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 			});
 		},
 
-		fallbacks: function () {
-			var ua = navigator.userAgent.toLowerCase();
-			var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-			var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
-
-			if (isAndroid || isSafari) {
-				$('.page-section--global-map, .page-section--network').addClass('page-section--no-fixed-bg');
-				$('.resources-list__group, .info-box, .info-box__blue > div').addClass('fallback_no-flexbox');
-			}
-		},
 
 
 
@@ -267,38 +235,22 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 
 
 		scrollToID: function (id) {
-			var path = window.location.pathname;
-
-			if (path.indexOf('/resources/') == -1) {
-				var offSet = 65;
-				var targetOffset = $(id).offset().top - offSet;
-				$('html,body').animate({ scrollTop: targetOffset }, 500);
+			const targetElement = $(id);
+			if (targetElement.length > 0) {
+				var offset = 65;
+				var targetOffset = targetElement.offset().top - offset;
+				$('html, body').animate({ scrollTop: targetOffset }, 500);
 			}
 		},
 
-
-
 		hash_urls: function () {
-
-			domReady(function () {
+			$(document).ready(function() {
 				if (window.location.hash) {
-					setTimeout(function () {
-						var hash = window.location.hash;
-						global.scrollToID(hash);
-					}, 500);
+					global.scrollToID(window.location.hash);
 				}
-			})
-
-		},
-
-
-
-		marketo_popup: function () {
-			$('.marketo-popup').magnificPopup({
-				type: 'ajax',
-				overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
 			});
 		},
+	
 
 
 
@@ -318,26 +270,6 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 			if (isTouchDevice) {
 				$('.social-media--share ul').css({ 'top': '-70px' });
 			}
-
-		},
-
-		animations: function () {
-			var animationInstances = document.querySelectorAll('.animation');
-
-			if (animationInstances.length === 0) {
-				return;
-			}
-
-			[].forEach.call(animationInstances, function (animation) {
-				var animationUrl = animation.dataset.animationFile;
-
-				var animItem = bodymovin.loadAnimation({
-					wrapper: animation,
-					animType: 'svg',
-					loop: true,
-					path: animationUrl
-				});
-			});
 		},
 
 		ctaAds: function () {
@@ -462,17 +394,12 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 
 	return {
 		init: function () {
-
-
 			global.megamenu();
 			global.searchbar();
 			global.magnific();
 			global.burger_menu();
-			global.fallbacks();
-			global.marketo_popup();
 			global.social_media_share();
 			global.paymentForms();
-			global.animations();
 			global.ctaAds();
 
 			if ($(".inner-page__submenu--sticky").length) {
@@ -481,13 +408,7 @@ define(['components/domReady', 'components/flexbox_fallback', 'components/placeh
 
 			global.hash_urls();
 
-
 			$('a[rel="external"]').attr('target', '_blank');
-			$('.page-col__contact-btn .btn').on('click', function () {
-				global.scrollToID('#map');
-				return false;
-			});
-
 
 			/* buttons span */
 			$('.btn').wrapInner('<span />');

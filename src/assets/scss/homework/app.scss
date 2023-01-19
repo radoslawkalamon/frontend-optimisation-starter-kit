@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /* SASS tools */
 @import "sass-components/_variables";
 @import "sass-components/_mixins";
@@ -27,7 +29,6 @@
 @import "modules/_pagination";
 @import "modules/_forms";
 @import "modules/_page-section";
-@import "modules/_sorter";
 @import "modules/_slider-full-width";
 @import "modules/_image-slider";
 @import "modules/_info-box";
@@ -35,12 +36,9 @@
 @import "modules/_resources-list";
 @import "modules/_item";
 @import "modules/_inner-page";
-@import "modules/_people-slider";
 @import "modules/_subscription";
-@import "modules/_contact-map";
 @import "modules/_search";
 @import "modules/_magnific";
-@import "modules/_page-col";
 @import "modules/_animation";
 @import "modules/_marketo-forms";
 @import "modules/_popup-lp";

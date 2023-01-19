@@ -12,3 +12,9 @@ $grey: #7a8488; // text color
 $red: #ed2d23;
 $orange: #f2a329;
 $green: #70bd47;
+
+$breakpoints: (
+  'WVGA': '768px',
+  'XGA': '1024px',
+  'WXGA': '1366px'
+);

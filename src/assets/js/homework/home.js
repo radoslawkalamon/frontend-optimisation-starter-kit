@@ -1,11 +1,5 @@
 require(['./main'], function (main) {
-
-
-
-
-	require(['jquery', 'components/domReady', 'tweenmax', 'components/bxslider', 'waypoints', 'global'], function ($, domReady, tweenmax, $bxslider, waypoints, global) {
-
-
+	require(['jquery', 'tweenmax', 'bxslider', 'waypoints', 'global'], function ($, tweenmax, bxslider, waypoints, global) {
 		var h = {
 
 			banner_anim: function () {
@@ -117,30 +111,11 @@ require(['./main'], function (main) {
 				});
 			},
 
-
-
-			shortcuts: function () {
-				$('.l-shortcuts--home').clone().insertAfter('.l-shortcuts--home').addClass('sticky');
-
-				$('.l-main').waypoint(function (direction) {
-					if (direction == 'down') {
-						$('.l-shortcuts--home.sticky').slideToggle(200);
-					}
-					else {
-						$('.l-shortcuts--home.sticky').slideToggle(100);
-					}
-				}, { offset: 0 });
-			},
-
-
 			info_box_anim: function () {
-
 				$('.info-box').waypoint(function (direction) {
 					TweenMax.to('.info-box__product-tour img', 1.5, { right: '-85%', ease: Expo.easeOut });
 					TweenMax.to('.info-box__product-tour .btn', 2, { opacity: 1, delay: 0.5, ease: Expo.easeOut });
 				}, { offset: 500 });
-
-
 			},
 
 
@@ -148,7 +123,6 @@ require(['./main'], function (main) {
 			init: function () {
 				this.adjust_banner_height();
 				this.slider_features();
-				this.shortcuts();
 				this.info_box_anim();
 
 
@@ -167,7 +141,4 @@ require(['./main'], function (main) {
 		h.init();
 		global.init();
 	});
-
-
-
 });

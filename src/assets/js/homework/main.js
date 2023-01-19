@@ -1,10 +1,11 @@
 requirejs.config({
   paths: {
-    "jquery": "vendor/jquery",
+    "bxslider": "vendor/bxslider.min",
+    "jquery": "vendor/jquery.min",
     "tweenmax": "vendor/TweenMax.min",
-    "async": "components/async",
-    "google": "components/google",
-    "waypoints": "components/waypoints.min"
+    "waypoints": "vendor/waypoints.min",
+    "magnific": "vendor/magnific.min",
+    "lottie": "vendor/lottie.min"
   },
   shim: {
     'bxslider': {
