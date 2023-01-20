@@ -29,7 +29,6 @@
     clear:both;
     padding: 9px 0;
 
-
     label {
         font-size: .945em;
         font-weight: 600;
@@ -42,7 +41,8 @@
     input[type="tel"],
     input[type="number"],
     textarea,
-    select {
+    select,
+    #iban-element {
         width: 93%;
         padding: 10px 3.5%;
 
