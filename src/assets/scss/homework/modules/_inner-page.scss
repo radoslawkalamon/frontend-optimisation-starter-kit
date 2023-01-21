@@ -150,13 +150,15 @@
 .inner-page__container {
 	@include clearfix();
 	position: relative;
-	margin-bottom: 40px;
-	min-height: 520px;
+
+	@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+		display: flex;
+		flex-flow: row nowrap;
+	}
 }
 
 .inner-page__container .col-75 > div {
 	@include clearfix();
-
 	margin-right: 0;
 }
 
@@ -166,8 +168,16 @@
 
 
 .inner-page__submenu {
-	margin-left: 30px;
+	margin-left: 0;
 	margin-bottom: 30px;
+
+	@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+		margin-left: 20px;
+	}
+
+	@media screen and (min-width: map.get($breakpoints, "XGA")) {
+		margin-left: 30px;
+	}
 
 	a {
 		display: block;
@@ -180,6 +190,20 @@
 
 		background: url(/assets/images/homework/link-arrow-grey.svg) 22px center no-repeat;
 		background-size: 14px 15px;
+
+		@media screen and (min-width: map.get($breakpoints, "XGA")) {
+			display: block;
+			padding: 14px 30px 14px 35px;
+
+			font-size: 1.15em;
+			font-weight: 600;
+			text-transform: uppercase;
+			color: #dcdcdc;
+
+			background: url(/assets/images/homework/link-arrow-grey.svg) no-repeat;
+			background-position: 10px center !important;
+			background-size: 14px 15px;
+		}
 	}
 
 
@@ -198,38 +222,29 @@
 		}
 
 		&.active {
-
-
 			a {
 				background: $blue2 url(/assets/images/homework/link-arrow-white.svg) 22px center no-repeat;
 				color: #fff;
 			}
 		}
-
 	}
-
-
 }
 
 .inner-page__submenu--sticky {
-	position: absolute;
-	top: 0;
-	right: 0;
+	position: static;
 
-	width: 22%;
-	margin-bottom: 0;
+	@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+		position: sticky;
+		top: 0;
+	}
 }
 
-
-
 .inner-page__group {
-	clear:both;
+	clear: both;
 	float: left;
 	width: 100%;
 	margin: 20px 0;
 }
-
-
 
 .inner-page__box {
 	margin: 0 0 30px 30px;
