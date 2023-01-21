@@ -9,7 +9,7 @@
 
 	a,
 	span {
-		border-radius: 50%;
+		@include border-radius(50%);
 	}
 
 	a > span {
