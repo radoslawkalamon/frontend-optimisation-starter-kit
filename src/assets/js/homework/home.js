@@ -92,20 +92,15 @@ require(['./main'], function (main) {
 
 			info_box_anim: function () {
 				const infoBox = document.querySelector('.info-box__product-tour');
-				const infoBoxObserver = new IntersectionObserver(
-					(entries, observer) => {
-						entries.forEach(entry => {
-							if (entry.isIntersecting) {
-								TweenMax.to('.info-box__product-tour img', 1.5, { right: '-85%', ease: Expo.easeOut });
-								TweenMax.to('.info-box__product-tour .btn', 2, { opacity: 1, delay: 0.5, ease: Expo.easeOut });
-								observer.disconnect();
-							}
-						});
-					},
-					{
-						rootMargin: '0px'
-					}
-				);
+				const infoBoxObserver = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							TweenMax.to('.info-box__product-tour img', 1.5, { right: '-85%', ease: Expo.easeOut });
+							TweenMax.to('.info-box__product-tour .btn', 2, { opacity: 1, delay: 0.5, ease: Expo.easeOut });
+							observer.disconnect();
+						}
+					});
+				});
 				infoBoxObserver.observe(infoBox);
 			},
 
