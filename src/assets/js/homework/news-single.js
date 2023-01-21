@@ -1,5 +1,5 @@
 require(['./main'], function (main) {
-	require(['jquery', 'global'], function ($, global) {
+	require(['global'], function (global) {
 		global.init();
 	});
 });

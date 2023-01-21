@@ -1,5 +1,5 @@
 require(['./main'], function (main) {
-	require(['jquery', 'lottie', 'global'], function ($, lottie, global) {
+	require(['lottie', 'global'], function (lottie, global) {
 		const partners = {
 			startAnimation() {
 				document.querySelectorAll('.animation').forEach((animation) => {		
