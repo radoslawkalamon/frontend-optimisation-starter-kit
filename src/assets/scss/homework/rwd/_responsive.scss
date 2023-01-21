@@ -585,11 +585,6 @@ $breakpoint3: 1340px;
 			}
 		}
 
-	.inner-page__box--recent-items ul {
-		font-size: .9em;
-	}
-
-
 		.l-social-media {
 			background: #f7f7f7;
 		}
@@ -652,17 +647,11 @@ $breakpoint3: 1340px;
 
 
 @media screen and (max-width: 768px) {
-
 	.page-section--network.text {
 		p {
 			margin-left: auto !important;
 			margin-right: auto !important;
 		}
-	}
-
-	.inner-page__box {
-		margin-left: 0;
-		margin-bottom: 30px;
 	}
 }
 
@@ -672,10 +661,6 @@ $breakpoint3: 1340px;
 		background: none !important;
 		padding-top: 20px;
 		padding-bottom: 20px;
-	}
-
-	.inner-page__box {
-		margin-left: 10px;
 	}
 }
 
