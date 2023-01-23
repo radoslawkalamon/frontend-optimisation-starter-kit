@@ -4,7 +4,7 @@
 */
 
 html, body {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Montserrat-fallback", Tahoma, sans-serif;
   font-size: 100%;
   line-height: 1.4;
 }
