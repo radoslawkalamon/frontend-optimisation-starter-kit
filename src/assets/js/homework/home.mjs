@@ -3,6 +3,18 @@ import './vendor/magnific.min.js'
 import './vendor/TweenMax.min.js'
 import './vendor/bxslider.min.js'
 
+const helpers = {
+  initIsVisibleObserver: ({ callback, element, shallDisconnect = true }) => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        callback({ element, isVisible: entry.isIntersecting })
+        shallDisconnect && entry.isIntersecting && observer.disconnect()
+      })
+    })
+    observer.observe(element)
+  }
+}
+
 const home = {
   banner_anim: function () {
     /* init anim items and set initial properties */
@@ -93,18 +105,16 @@ const home = {
     });
   },
 
-  info_box_anim: function () {
-    const infoBox = document.querySelector('.info-box__product-tour');
-    const infoBoxObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
+  setObserverForInfoBoxAnimation: () => {
+    helpers.initIsVisibleObserver({
+      callback: ({ isVisible }) => {
+        if (isVisible) {
           TweenMax.to('.info-box__product-tour img', 1.5, { right: '-85%', ease: Expo.easeOut });
           TweenMax.to('.info-box__product-tour .btn', 2, { opacity: 1, delay: 0.5, ease: Expo.easeOut });
-          observer.disconnect();
         }
-      });
-    });
-    infoBoxObserver.observe(infoBox);
+      },
+      element: document.querySelector('.info-box__product-tour')
+    })
   },
 
   paymentForms: function () {
@@ -234,7 +244,7 @@ const home = {
   init: function () {
     this.adjust_banner_height();
     this.slider_features();
-    this.info_box_anim();
+    this.setObserverForInfoBoxAnimation();
     this.paymentForms();
     this.magnific();
     this.arrowDownButtonEvent();
