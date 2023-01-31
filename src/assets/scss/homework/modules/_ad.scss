@@ -1,0 +1,106 @@
+$ad-placeholder-background-color: rgba(255,255,255,0.1);
+$ad-placeholder-color: $lightblue2;
+
+.ad-wrapper {
+  background-color: $ad-placeholder-background-color;
+  height: 300px;
+  position: relative;
+	margin-bottom: 20px;
+  width: 100%;
+
+  &::before {
+    box-sizing: border-box;
+    color: $ad-placeholder-color;
+    content: 'Advertisement';
+    display: block;
+    font-size: 0.75rem;
+    padding: 0.25rem 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+	@media screen and (min-width: map.get($breakpoints, "XGA")) {
+		margin-bottom: 30px;
+	}
+
+  & > * {
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+.ad-news-listing {
+  background-color: #f9fafb;
+  margin: auto 0;
+  font-family: system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
+  width: 100%;
+
+  &__wrapper {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 3rem 1rem;
+    width: 100%;
+
+    @media screen and (min-width: map.get($breakpoints, "VGA")) {
+      padding: 3rem 1.5rem;
+    }
+
+    @media screen and (min-width: map.get($breakpoints, "XGA")) {
+      align-items: center;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 4rem 2rem;
+    }
+  }
+
+  &__call-to-action {
+    color: #111827;
+    font-size: 1.875rem;
+    font-weight: 800;
+    letter-spacing: -.025em;
+    line-height: 2.25rem;
+
+    @media screen and (min-width: map.get($breakpoints, "VGA")) {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  &__text {
+    display: block;
+
+    &--indigo {
+      color: #4f46e5;
+    }
+  }
+  
+  &__button {
+    border-radius: .375rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    display: flex;
+  }
+
+  &__button-text {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: .375rem;
+    color: #4f46e5;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    justify-content: center;
+    padding: .75rem 1.25rem;
+
+    &:hover {
+      background-color: #eef2ff;
+      color: #014975;
+    }
+  }
+}
