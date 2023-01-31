@@ -95,7 +95,7 @@ const home = {
 
   info_box_anim: function () {
     const infoBox = document.querySelector('.info-box__product-tour');
-    const infoBoxObserver = new IntersectionObserver((entries) => {
+    const infoBoxObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           TweenMax.to('.info-box__product-tour img', 1.5, { right: '-85%', ease: Expo.easeOut });

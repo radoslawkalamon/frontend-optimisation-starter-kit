@@ -4,8 +4,8 @@ const helpers = {
       entries.forEach(entry => {
         callback({ element, isVisible: entry.isIntersecting })
         shallDisconnect && entry.isIntersecting && observer.disconnect()
-      });
-    });
+      })
+    })
     observer.observe(element)
   }
 }
@@ -22,7 +22,10 @@ const contact = {
       callback: ({ isVisible }) => isVisible && contact.appendRecaptcha(),
       element: document.querySelector('[data-hook="contact"]')
     })
+  },
+  init: () => {
+    contact.setObserverForRecaptcha()
   }
 }
 
-contact.setObserverForRecaptcha()
+contact.init()
