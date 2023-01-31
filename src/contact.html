@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://embed.tawk.to" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="preload" href="/assets/fonts/montserrat-variable-basic-latin.woff2" as="font" fetchpriority="high" />
+    <link rel="preload" href="/assets/fonts/montserrat-variable-basic-latin.woff2" as="font" crossorigin fetchpriority="high" type="font/woff2" />
     <style>
       @font-face {
         font-family: "Montserrat-fallback";
@@ -31,7 +31,8 @@
 
     <script src="https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default" charset="UTF-8" crossorigin="*" fetchpriority="low" defer></script>
 
-    <script data-main="/assets/js/homework/contact" src="/assets/js/homework/vendor/require.min.js" defer></script>
+    <script type="module" src="/assets/js/homework/contact.mjs" fetchpriority="low" defer></script>
+    <script type="module" src="/assets/js/homework/global.mjs" fetchpriority="low" defer></script>
 
     <script src="https://www.google.com/recaptcha/api.js?render=6Lc-XPUZAAAAAOiLd3INhvxz6joup8GNDQ3Iy-uL" fetchpriority="low" defer></script>
 

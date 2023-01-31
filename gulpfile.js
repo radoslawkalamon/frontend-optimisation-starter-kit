@@ -23,12 +23,8 @@ const gulp                      = require('gulp'),
       plumber                   = require('gulp-plumber'),
       autoprefixer              = require('gulp-autoprefixer'),
       minifyCss                 = require('gulp-clean-css'),
-      babel                     = require('gulp-babel'),
-      webpack                   = require('webpack-stream'),
       uglify                    = require('gulp-uglify'),
-      concat                    = require('gulp-concat'),
       browserSync               = require('browser-sync').create(),
-      dependents                = require('gulp-dependents'),
       htmlmin                   = require('gulp-htmlmin'),
       swPrecache                = require('sw-precache'),
       path                      = require('path'),
@@ -83,23 +79,6 @@ gulp.task('css-minify', () => {
     .pipe(gulp.dest(dist_assets_folder + 'css'))
 });
 
-gulp.task('js', () => {
-  return gulp.src([src_assets_folder + 'js/**/*.js', '!' + src_assets_folder + 'js/homework/**/*.js'], { since: gulp.lastRun('js') })
-    .pipe(plumber())
-    .pipe(webpack({
-      mode: 'production'
-    }))
-    .pipe(sourcemaps.init())
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
-    .pipe(concat('all.js'))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(dist_assets_folder + 'js'))
-    .pipe(browserSync.stream());
-});
-
 gulp.task('js-copy', () => {
   return gulp.src([src_assets_folder + 'js/homework/**/*'], { since: gulp.lastRun('js-copy') })
     .pipe(gulp.dest(dist_assets_folder + 'js/homework'))
@@ -108,11 +87,8 @@ gulp.task('js-copy', () => {
 
 gulp.task('js-minified', () => {
   return gulp.src([
-    src_assets_folder + 'js/homework/*.js',
-    src_assets_folder + 'js/homework/components/*.js',
-    src_assets_folder + 'js/homework/vendor/*.js',
-    src_assets_folder + 'js/homework/vendor/jquery/dist/*.js',
-    src_assets_folder + 'js/homework/vendor/requirejs/*.js',
+    src_assets_folder + 'js/homework/*.+(mjs|js)',
+    src_assets_folder + 'js/homework/vendor/*.+(mjs|js)'
   ], { since: gulp.lastRun('js-minified'), base: src_assets_folder + 'js/homework' })
     .pipe(uglify())
     .pipe(gulp.dest(dist_assets_folder + 'js/homework'))
@@ -196,7 +172,6 @@ gulp.task(
     'clear',
     'html-minified',
     'sass',
-    'js',
     'js-minified',
     'fonts',
     'videos',
@@ -209,7 +184,14 @@ gulp.task(
   )
 );
 
-gulp.task('dev', gulp.series('html', 'sass', 'fonts', 'videos', 'extra-files', 'js', 'js-copy'));
+gulp.task('dev', gulp.series(
+  'html',
+  'sass',
+  'fonts',
+  'videos',
+  'extra-files',
+  'js-copy'
+));
 
 gulp.task('serve', () => {
   return browserSync.init({
@@ -231,6 +213,7 @@ gulp.task('watch', () => {
     src_assets_folder + 'sass/**/*.sass',
     src_assets_folder + 'scss/**/*.scss',
     src_assets_folder + 'js/**/*.js',
+    src_assets_folder + 'js/**/*.mjs',
     src_assets_folder + 'fonts/**/*',
     src_assets_folder + 'videos/**/*',
     src_folder + '*.txt',
