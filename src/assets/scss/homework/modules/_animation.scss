@@ -1,13 +1,3 @@
-@keyframes animation-loader-icon {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes animation-loader-text {
   from {
     opacity: 0.0;
@@ -30,22 +20,13 @@
     gap: 1rem;
 
     &::before {
-      animation-duration: 1s;
-      animation-iteration-count: infinite;
-      animation-name: animation-loader-icon;
-      animation-timing-function: linear;
-      border: 4px solid $navyblue;
-      border-bottom: 4px solid transparent;
-      border-radius: 50%;
-      content: '';
+      content: url('/assets/images/homework/preloader.gif');
       display: block;
-      height: 32px;
       margin: 0 auto;
-      width: 32px;
     }
 
     &::after {
-      animation-delay: 3s;
+      animation-delay: 5s;
       animation-duration: 1s;
       animation-timing-function: linear;
       animation-name: animation-loader-text;
