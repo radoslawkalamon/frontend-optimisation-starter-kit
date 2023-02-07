@@ -33,13 +33,6 @@ const home = {
 
     TweenMax.set('#rainbow', { opacity: 0, left: '-5%' });
 
-    TweenLite.to('.home-banner__content p', 2, { opacity: 1, delay: 1.6 });
-    TweenLite.to('.l-home-banner__3-cols > div', 1, { opacity: 1, delay: 1.7 });
-    TweenLite.to('.home-banner__content .headline-1', 2, { opacity: 1, delay: 1.1 });
-    TweenLite.to('.home-banner__anim img', 1, { opacity: 1 });
-    TweenLite.to('.home-banner__content p .btn', 2, { opacity: 1, delay: 0 });
-    TweenLite.to('.l-home-banner .btn--arrow-down', 2, { opacity: 1, delay: 2 });
-
     // Animation start
     TweenLite.to('.home-banner__anim', 1, { opacity: 1, delay: 0.5 });
     TweenLite.to('#platform, #pc', 1, { top: '0', ease: Back.easeOut, delay: 0.5 });
@@ -62,36 +55,6 @@ const home = {
     TweenLite.to('#pc', 1.3, { top: 0, left: 0, ease: Expo.easeOut });
 
     TweenLite.to('#rainbow', 1.1, { opacity: 1, delay: 0.5, left: 0 });
-  },
-
-  // banner height adjustment
-  adjust_banner_height: function () {
-    var do_it = 0;
-
-    function change_banner_size() {
-      if ($(window).width() > 1150 && $(window).height() > 700) {
-        var viewport_h = $(window).height(),
-          navbar_h = $('.l-navbar').height()
-
-        var banner_height = viewport_h - navbar_h;
-
-        $('.l-home-banner').css({ 'height': banner_height });
-      } else {
-        $('.l-home-banner').css({ 'height': 'auto' });
-      }
-
-      if ($(window).width() > 1150 && $(window).height() > 1000) {
-        $('.l-home-banner').css({ 'height': '800px' });
-      }
-    }
-
-    change_banner_size();
-    this.banner_anim();
-
-    $(window).resize(function () {
-      clearTimeout(do_it);
-      do_it = setTimeout(function () { change_banner_size(); }, 100);
-    });
   },
 
   slider_features: function () {
@@ -242,7 +205,7 @@ const home = {
   },
 
   init: function () {
-    this.adjust_banner_height();
+    this.banner_anim();
     this.slider_features();
     this.setObserverForInfoBoxAnimation();
     this.paymentForms();

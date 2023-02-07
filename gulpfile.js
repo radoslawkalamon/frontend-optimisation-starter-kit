@@ -96,7 +96,7 @@ gulp.task('js-minified', () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src([src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|svg|ico)'], { since: gulp.lastRun('images') })
+  return gulp.src([src_assets_folder + 'images/**/*.+(png|jpg|jpeg|webp|gif|svg|ico)'], { since: gulp.lastRun('images') })
     .pipe(plumber())
     .pipe(gulp.dest(dist_assets_folder + 'images'))
     .pipe(browserSync.stream());
@@ -205,7 +205,7 @@ gulp.task('serve', () => {
 
 gulp.task('watch', () => {
   const watchImages = [
-    src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|svg|ico)'
+    src_assets_folder + 'images/**/*.+(png|jpg|jpeg|webp|gif|svg|ico)'
   ];
 
   const watch = [

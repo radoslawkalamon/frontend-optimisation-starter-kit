@@ -1,182 +1,151 @@
 .l-home-banner {
+	align-items: center;
+	background-image: url('/assets/images/homework/banner.webp');
+	background-size: cover;
+	display: flex;
+	height: auto;
 	position: relative;
+	overflow: hidden;
+	text-align: center;
 	width: 100%;
-	height: 800px;
+
+	@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+		text-align: left;
+	}
+
+	@media screen and (min-width: map.get($breakpoints, "XGA")) {
+		height: calc(100vh - #{$l-navbar-height});
+		min-height: 600px;
+		max-height: 800px;
+	}
 
 	.layout {
-		position: relative;
-		z-index: 2;
-		padding-top: 100px;
+		width: 100%;
 	}
-
-	.headline-1,
-	p,
-	img,
-	.l-home-banner__3-cols > div,
-	.home-banner__anim,
-	.btn--arrow-down {
-		opacity: 0;
-	}
-
 
 	.btn--arrow-down {
-		position: absolute;
-		bottom: 10px;
-		left: 50%;
-		z-index: 4;
-		
-		margin-left: 35px;
-	}
+		display: none;
 
-	&:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-
-		background-color: $darkgrey;
-		opacity: 0.8;
+		@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+			display: block;
+			position: absolute;
+			bottom: 2em;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1;
+			margin: 0;
+		}
 	}
 }
 
-
 .home-banner__content {
-	max-width: 700px;
+	background-color: rgba($navyblue, 0.8);
+	padding: 2em;
+	position: relative;
+	z-index: 2;
+
+	@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+		background-color: transparent;
+		box-sizing: border-box;
+		width: 55%;
+	}
 
 	.headline-1 {
-		color: #fff;
-		text-shadow: 0px 1px .2px rgba(0, 0, 0, .2);
+		color: $white;
+		font-size: 3em;
+		text-shadow: 0px 1px 0.2px rgba(0, 0, 0, .2);
+	
+		@media screen and (min-width: map.get($breakpoints, "XGA")) {
+			font-size: 4em;
+		}
 	}
 
 	p {
 		color: $lightblue;
-		text-shadow: 0px 1px .4px rgba(0, 0, 0, .4);
+		font-size: 1.2em !important;
+		text-shadow: 0px 1px 0.4px rgba(0, 0, 0, .4);
 	}
 }
-
-
-
-
 
 .l-home-banner__3-cols {
-	@include clearfix();
-	margin-bottom: 30px;
+	display: grid;
+	gap: 0.5em;
+	padding-bottom: 1.5em;
 
-	> div {
+	@media screen and (min-width: map.get($breakpoints, "HVGA")) {
+		gap: 0.5em;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+		gap: 2em;
+	}
+
+	& > div {
 		position: relative;
-		float: left;
-		font-size: 0.9em;
 
-		&:first-child {
-			width: 30%;
-			margin-right: 2%; 
-		}
-
-		&:nth-child(2) {
-			width: 33%;
-		}
-
-		&:nth-child(3) {
-			width: 32%;
-		}
-
-		&:not(:first-child) {
-
-			p {
-				margin-left: 20px;
-			}
-
-
-			&:before {
+		&::before {
+			@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+				left: -1em;
 				position: absolute;
-				top: -8px;
-
-				width: 2px;
-				height: 74px;
-				content : "";
-
-				background: url(/assets/images/homework/sep-banner.png) no-repeat;
+				top: 0;
+				content: url('/assets/images/homework/sep-banner.png');
 			}
 		}
-	}
 
-}
-
-.text .l-home-banner__3-cols p {
-	line-height: 1.2;
-	
-
-	a {
-		color: #fff;
-
-		&:hover {
-			color: #d1f6ff;
+		&:first-child::before {
+			display: none;
 		}
 	}
 }
-
-
-
-
-
-
-
 
 .home-banner__anim {
-    position: absolute;
-    right: -170px;
-    top:40px;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 32px;
+	opacity: 0;
+	z-index: 1;
 
-    width: 67%;
-    max-width: 950px;
-    height: auto;
+	@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+		top: 50%;
+		transform: translateY(-50%);
+		left: auto;
+    right: -10%;
+    width: 60%;
+	}
 
 	img {
-	    position: absolute;
-	    top:0; 
-	    left:0;
-
-	    width: 100%;
-	    height: auto;
+	  position: absolute;
+	  top: 0; 
+	  left: 0;
+    width: 100%;
+	  height: auto;
 	}
 
 	#resizer {
-	    position: relative;
-
+	  position: relative;
 	}
+
 	#chart-1 {
-	    left:52.7%;
-	    top:34.2%;
-
-	    width: 2.421%;
-	    height: auto;    
+    left: 52.7%;
+    top: 34.2%;
+    width: 2.421%;
+    height: auto;    
 	}
-	#chart-2 {
-	    left:56.3%;
-	    top:41.7%;
 
-	    width: 2.421%;
-	    height: auto;    
+	#chart-2 {
+    left: 56.3%;
+    top: 41.7%;
+    width: 2.421%;
+    height: auto;    
 	}
 
 	#chart-3 {
-	    left:59.0%;
-	    top:55.7%;
-
-	    width: 2.421%;
-	    height: auto;    
+    left: 59.0%;
+    top: 55.7%;
+    width: 2.421%;
+    height: auto;    
 	}
 }
-
-
-
-.l-home__news {
-	padding-bottom: 50px;
-	margin-bottom: 30px;
-	border-bottom: 1px solid #d6d8d7;
-}
-
-
-

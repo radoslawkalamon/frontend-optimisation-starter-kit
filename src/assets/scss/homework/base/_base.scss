@@ -11,8 +11,12 @@ html, body {
 
 body {
 	background: #fff;
-
+  font-size: 89%;
   padding-top: 80px;
+
+  @media screen and (min-width: map.get($breakpoints, "WVGA")) {
+    font-size: 100%;
+  }
 }
 
 a {

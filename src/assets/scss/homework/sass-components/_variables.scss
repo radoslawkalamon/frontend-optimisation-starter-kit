@@ -12,10 +12,14 @@ $grey: #7a8488; // text color
 $red: #ed2d23;
 $orange: #f2a329;
 $green: #70bd47;
+$white: #fff;
 
 $breakpoints: (
+  'HVGA': '480px',
   'VGA': '640px',
   'WVGA': '768px',
   'XGA': '1024px',
   'WXGA': '1366px'
 );
+
+$l-navbar-height: 80px;
