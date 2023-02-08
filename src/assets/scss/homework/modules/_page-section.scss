@@ -1,13 +1,32 @@
+.home-video {
+	aspect-ratio: 16 / 9;
+	display: block;
+	line-height: 0;
+	margin: 0 auto;
+	position: relative;
+	width: 480px;
+
+	&__thumbnail {
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+		width: 100%;
+	}
+
+	&__btn-play {
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+	}
+}
+
 .l-main {
 	.page-section {
 		padding: 4em 0;
 		position: relative;
 		clear: both;
 	}
-
-	.inner-page .page-section {
-	}
-
 
 	.page-section--services {
 		position: relative;
@@ -39,11 +58,6 @@
 
 	.page-section--video {
 		text-align: center;
-
-		iframe {
-			display: inline-block;
-			max-width: 100%;
-		}
 	}
 
 	.page-section--global-map {
@@ -120,79 +134,6 @@
 		}
 	}
 
-	.page-section--lp {
-
-		&__item {
-			display: block;
-			width: 100%;
-			font-family: "Lato";
-			margin-bottom: 70px;
-
-			@media screen and (max-width: 768px) {
-				margin-bottom: 20px;
-			}
-
-			img {
-				float: left;
-				overflow: hidden;
-				width: 15%;
-				margin-top: -20px;
-
-				@media screen and (max-width: 767px) {
-					margin-top: 0;
-				}
-			}
-
-			.block-info {
-				float: left;
-				width: 85%;
-
-				.headline-4 {
-					font-size: 30px;
-					font-weight: 300;
-					color: #258bc9;
-					padding: 0 20px 10px 30px;
-
-					@media screen and (max-width: 768px) {
-						padding: 0 10px 10px 10px;
-					}
-				}
-
-				p {
-					font-size: 18px;
-					font-weight: 300;
-					color: #5f5f5f;
-					padding: 0 20px 0 30px;
-
-					@media screen and (max-width: 768px) {
-						padding: 0 10px 10px 10px;
-					}
-				}
-			}
-		}
-
-
-		@media screen and (max-width: 1023px) {
-			.col-33 {
-				width: 100%;
-				display: block;
-				margin-bottom: 0;
-			}
-		}
-
-		.clear {
-		&::before,
-		&::after {
-			content: '';
-			display: table;
-		}
-
-		&::after {
-			clear: both;
-		}
-		}
-	}
-
 	.page-section--bg-dark {
 		background: #131213 url(/assets/images/homework/bg-sec-dark-circles.png) top center repeat-x;
 
@@ -246,17 +187,6 @@
 			max-width: 1090px;
 			margin: 0 auto;
 		}
-	}
-
-
-
-	.page-section--grid-bg-color {
-		background: #f7f7f7;
-	}
-
-
-	.page-section--grid-bg-img {
-		background: #f7f7f7 url(/assets/images/homework/bg-sec-grey-grid.png) center 20px no-repeat;
 	}
 
 	.page-section--bg-white {

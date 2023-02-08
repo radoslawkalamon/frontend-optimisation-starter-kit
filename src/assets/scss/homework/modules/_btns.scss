@@ -130,3 +130,30 @@
 		}
 	}
 }
+
+.btn-play {
+	align-items: center;
+	aspect-ratio: 1 / 1;
+	background-color: rgba($white, 0.75);
+	border: 2px solid $blue1;
+	border-radius: 50%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	transition: background-color 0.25s ease;
+	width: 80px;
+
+	&::before {
+		border-bottom: 1em solid transparent;
+		border-left: 1.625em solid $blue1;
+		border-top: 1em solid transparent;
+		content: '';
+		height: 0;
+		width: 0;
+		transform: translateX(0.125em);
+	}
+	
+	&:hover {
+		background-color: rgba($white, 1);
+	}
+}
