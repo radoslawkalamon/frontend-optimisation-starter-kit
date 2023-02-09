@@ -1,7 +1,7 @@
 .inner-page__header {
 	position: relative;
 	text-align: center;
-	background: url(/assets/images/homework/bg-sec-header-blue-grid.jpg) top center no-repeat;
+	background: url(/assets/images/homework/bg-sec-header-blue-grid.webp) top center no-repeat;
 	background-size: cover;
 
 	&--full-height {
@@ -61,7 +61,7 @@
 
 /* inner page contaciner - for news, resource -> whole layer under the main content is blue */
 .inner-page--blue-fill {
-	background: #f3f3f3 url(/assets/images/homework/bg-listings-grad.jpg) top center no-repeat;
+	background: #f3f3f3 url(/assets/images/homework/bg-listings-grad.webp) top center no-repeat;
 }
 
 
@@ -151,7 +151,7 @@
 
 
 	li {
-		background: $grey url(/assets/images/homework/bg-dark-grain.png);
+		background: $grey url(/assets/images/homework/bg-dark-grain.webp);
 		@include transition(all, 0.2s, ease-in);
 
 		&:not(:first-child) a {

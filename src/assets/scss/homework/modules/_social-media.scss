@@ -129,6 +129,11 @@
 		width: 50%;
 		margin: 4px 0;
 
+		@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+			width: 100%;
+			clear: both;
+		}
+
 		a {
 			font-size: 1.25em;
 			font-weight: 600;
@@ -149,11 +154,10 @@
 		> li {
 			position: relative;
 
-			>a {
+			> a {
 				-ms-touch-action: none;
 				touch-action: none;
 			}
-
 
 			ul {
 				position: absolute;
@@ -173,7 +177,6 @@
 					margin: 3px 0;
 				}
 			}
-
 
 			&:hover ul {
 				opacity: 1;

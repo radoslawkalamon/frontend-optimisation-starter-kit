@@ -80,17 +80,6 @@ $breakpoint3: 1366px;
 			.small-text {
 				font-size: 1.1em;
 			}
-
-
-	        .text__ul-2-cols {
-
-	            li {
-	                display: inline-block;
-	                width: 90% !important;
-	                clear: both;
-	                margin-left: 0 !important;
-	            }
-	        }
 		}
 
 
@@ -678,17 +667,6 @@ $breakpoint3: 1366px;
 
 			.col-15 {
 				display: none;
-			}
-		}
-	}
-}
-
-@media screen and (min-width: $breakpoint2) and (max-width: 1270px), (min-width: 200px) and (max-width: 400px) {
-	.l-social-media__box-connect {
-		.social-media--2-cols {
-			li {
-				width: 100%;
-				clear: both;
 			}
 		}
 	}
