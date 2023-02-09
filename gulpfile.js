@@ -68,7 +68,8 @@ gulp.task('sass', (cb) => {
 gulp.task('css-purge', () => {
   return gulp.src(dist_assets_folder + 'css/**/*.css')
     .pipe(purgecss({
-      content: [dist_folder + '*.html']
+      content: [dist_folder + '*.html'],
+      safelist: [/--visible$/, /^mfp-/]
     }))
     .pipe(gulp.dest(dist_assets_folder + 'css'))
 })
