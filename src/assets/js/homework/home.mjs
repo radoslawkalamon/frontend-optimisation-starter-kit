@@ -70,12 +70,7 @@ const home = {
 
   setObserverForInfoBoxAnimation: () => {
     helpers.initIsVisibleObserver({
-      callback: ({ isVisible }) => {
-        if (isVisible) {
-          TweenMax.to('.info-box__product-tour img', 1.5, { transform: 'translateX(-8%)', ease: Expo.easeOut });
-          TweenMax.to('.info-box__product-tour .btn', 2, { opacity: 1, delay: 0.5, ease: Expo.easeOut });
-        }
-      },
+      callback: ({ element, isVisible }) => isVisible && element.classList.add('info-box__product-tour--visible'),
       element: document.querySelector('.info-box__product-tour')
     })
   },

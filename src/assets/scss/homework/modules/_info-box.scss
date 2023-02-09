@@ -52,20 +52,47 @@
 	text-align: center;
 
 	img {
+		aspect-ratio: 400 / 367;
 		display: block;
 		margin: 0 auto 1em;
 		max-width: 400px;
-		transform: translateX(40%);
+		transform: translateX(0);
+		transition: transform 0.5s ease;
+		width: 100%;
+
+		@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+			transform: translateX(40%);
+			width: 400px;
+		}
 	}
 
 	.btn {
 		margin: 0;
-		opacity: 0;
+		opacity: 1;
+		transition: opacity 0.5s ease 0.5s;
+
+		@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+			opacity: 0;
+		}
+	}
+
+	&--visible {
+		img {
+			@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+				transform: translateX(-8%);
+			}
+		}
+
+		.btn {
+			@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+				opacity: 1;
+			}
+		}
 	}
 }
 
 
-@media screen and (max-width: map.get($breakpoints, "WVGA")) {
+@media screen and (max-width: map.get($breakpoints, "XGA")) {
 	.info-box {
 		.col-35,
 		.col-60,
@@ -88,12 +115,6 @@
 
 		.col-65 {
 			margin-bottom: 0;
-		}
-	}
-
-	.info-box__product-tour {
-		img {
-			transform: translateX(0) !important;
 		}
 	}
 }
