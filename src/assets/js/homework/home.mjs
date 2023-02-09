@@ -72,7 +72,7 @@ const home = {
     helpers.initIsVisibleObserver({
       callback: ({ isVisible }) => {
         if (isVisible) {
-          TweenMax.to('.info-box__product-tour img', 1.5, { right: '-85%', ease: Expo.easeOut });
+          TweenMax.to('.info-box__product-tour img', 1.5, { transform: 'translateX(-8%)', ease: Expo.easeOut });
           TweenMax.to('.info-box__product-tour .btn', 2, { opacity: 1, delay: 0.5, ease: Expo.easeOut });
         }
       },

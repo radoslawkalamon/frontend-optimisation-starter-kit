@@ -250,52 +250,6 @@ $breakpoint3: 1366px;
 		font-size: 2.5em;
 	}
 
-	/* info box */
-		.info-box {
-			.col-35,
-			.col-60,
-			.col-40,
-			.col-65 {
-				width: 100% !important;
-			}
-		}
-
-		.info-box,
-		.info-box__blue > div {
-			-ms-flex-direction: column;
-			-webkit-flex-direction: column;
-			flex-direction: column;
-			display: block;
-		}
-
-		.info-box__blue {
-			padding-top: 0 !important;
-			padding-bottom: 0 !important;
-			clear: both;
-
-			.col-65 {
-				margin-bottom: 0;
-			}
-		}
-
-
-		.info-box__product-tour {
-			height: auto;
-			overflow: none;
-			text-align: center;
-			padding-top: 20px;
-			clear: both;
-
-			img {
-				width: 90%;
-				margin: 0 auto;
-				position: static;
-			}
-		}
-
-
-
-
 	/* social media */
 		.l-social-media {
 			.l-social-media__news-blog > div,
