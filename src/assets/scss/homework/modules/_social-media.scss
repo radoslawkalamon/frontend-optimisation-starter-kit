@@ -118,9 +118,6 @@
 	}
 }
 
-
-
-
 .social-media--2-cols {
 	@include clearfix();
 	
@@ -129,7 +126,7 @@
 		width: 50%;
 		margin: 4px 0;
 
-		@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+		@media screen and (min-width: map.get($breakpoints, "XGA")) {
 			width: 100%;
 			clear: both;
 		}
@@ -144,8 +141,6 @@
 		}
 	}
 }
-
-
 
 .social-media--share {
 		display: inline-block;
