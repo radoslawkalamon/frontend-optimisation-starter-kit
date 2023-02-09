@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preload" href="/assets/fonts/montserrat-variable-basic-latin.woff2" as="font" crossorigin fetchpriority="high" type="font/woff2" />
     <link rel="preload" href="/assets/images/homework/logo.svg" as="image" fetchpriority="high" />
+    <link rel="preload" href="/assets/videos/video.webp" as="image" fetchpriority="high" />
     <link rel="preload" href="/assets/js/homework/vendor/lottie.min.js" as="script" fetchpriority="low" />
     <link rel="preload" href="/assets/videos/animation.json" as="fetch" crossorigin fetchpriority="low" />
     <style>
@@ -169,9 +170,16 @@
     </div>
 
     <div class="inner-page">
-      <header class="inner-page__header inner-page__header--with-video inner-page__header--ico" role="banner">
-        <video class="inner-page__header-video" autoplay loop muted playsinline>
-          <source src="/assets/videos/video.mp4" type="video/mp4" />
+      <header class="inner-page__header inner-page__header--with-video" role="banner">
+        <video
+          autoplay
+          class="inner-page__header-video"
+          loop
+          muted
+          playsinline
+          poster="/assets/videos/video.webp"
+        >
+          <source src="/assets/videos/video.webm" type="video/webm" />
         </video>
 
         <div class="layout2 text text--bg-blue">

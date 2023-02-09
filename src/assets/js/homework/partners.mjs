@@ -25,13 +25,13 @@ const animation = {
   observerCallback: async ({ element, isVisible }) => {
     if (isVisible) {
       await animation.appendLottie()
+      lottie.setQuality('low')
       const player = lottie.loadAnimation({
         wrapper: element,
         animType: 'svg',
         loop: true,
         animationData: await animation.fetchJSON()
       })
-      player.setQuality('low')
       player.addEventListener('DOMLoaded', () => {
         helpers.initIsVisibleObserver({
           callback: ({ isVisible }) => isVisible ? player.play() : player.stop(),

@@ -3,25 +3,10 @@ $breakpoint2: 1024px;
 $breakpoint3: 1366px;
 
 @media screen and (max-width: $breakpoint1) {
-	/* inner page header */
-	.inner-page__header {
-		.layout2 {
-			padding: 20px 0;
-		}
-
-		.headline-1 {
-			font-size: 2.7em;
-			padding-bottom: 30px;
-		}
-
-	}
-
-
 	/* inner page main */
 	.l-main--inner-page {
 		padding-top: 40px;
 	}
-
 
 	/* page section */
 		.page-section {
@@ -32,7 +17,6 @@ $breakpoint3: 1366px;
 			.headline-3 {
 				font-size: 3em;
 			}
-
 		}
 
 		.page-section--global-map__home {
@@ -46,7 +30,6 @@ $breakpoint3: 1366px;
 			padding-top: 50px;
 			padding-bottom: 120px;
 
-
 			.btn {
 				position: absolute;
 				bottom: -85px;
@@ -54,11 +37,6 @@ $breakpoint3: 1366px;
 				margin-left: -80px;
 			}
 		}
-
-
-
-
-
 
 	/* btn arrow (in slider left/right @ home) */
 		.btn-arrow {
@@ -156,20 +134,15 @@ $breakpoint3: 1366px;
 
 
 	/* inner page header */
-	.inner-page--blue-fill__header,
-	.inner-page--green-fill__header {
+	.inner-page--blue-fill__header {
 		padding-top: 20px;
 		padding-bottom: 30px;
 	}
 
 
-	.inner-page--blue-fill__header--news,
-	.inner-page--green-fill__header--blog,
-	.inner-page--blue-fill__header--resources {
+	.inner-page--blue-fill__header--news {
 		background: none;
 	}
-
-
 
 	/* news list */
 	.news-list--main {
@@ -421,8 +394,7 @@ $breakpoint3: 1366px;
 
 
 
-	.inner-page--blue-fill__header h1,
-	.inner-page--green-fill__header h1 {
+	.inner-page--blue-fill__header h1 {
 		font-size: 3em;
 	}
 
@@ -569,8 +541,7 @@ $breakpoint3: 1366px;
 }
 
 @media screen and (max-width: $breakpoint2) {
-	.inner-page--blue-fill__header,
-	.inner-page--green-fill__header {
+	.inner-page--blue-fill__header {
 		background: none !important;
 		padding-top: 20px;
 		padding-bottom: 20px;
