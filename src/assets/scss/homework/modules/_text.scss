@@ -76,8 +76,8 @@
           }
 
 
-          &:not(.text--bg-grey), {
           &:not(.text--bg-blue)
+          &:not(.text--bg-grey) {
 
             ul:not(.text__ul-downloads) li:before {
               background: url(/assets/images/homework/list-tick-blue.svg) no-repeat;
