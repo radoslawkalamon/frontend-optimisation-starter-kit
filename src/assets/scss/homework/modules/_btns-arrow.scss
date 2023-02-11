@@ -28,28 +28,6 @@
 		}
 	}
 
-	&.white.btn-arrow--left a {
-		background: #fff url(/assets/images/homework/btn-arrow-light-left.svg) center center no-repeat;
-
-		&:hover {
-			background-position: 7px center;
-		}
-	}
-
-
-	&.white.btn-arrow--right a {
-		background: #fff url(/assets/images/homework/btn-arrow-light-right.svg) center center no-repeat;
-
-		&:hover {
-			background-position: 13px center;
-		}
-	}
-
-
-
-
-
-
 	/* grey set */
 	&.grey a {
 		border: 2px solid #575757;
