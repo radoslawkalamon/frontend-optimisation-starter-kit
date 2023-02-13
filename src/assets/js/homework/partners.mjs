@@ -1,12 +1,20 @@
 const helpers = {
-  initIsVisibleObserver: ({ callback, element, shallDisconnect = true }) => {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        callback({ element, isVisible: entry.isIntersecting })
-        shallDisconnect && entry.isIntersecting && observer.disconnect()
-      })
-    })
-    observer.observe(element)
+  initIsVisibleObserver: ({ callback, elements, shallUnobserve = true, threshold = 0 }) => {
+    let unobservedCount = 0
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          callback({ element: entry.target, isVisible: entry.isIntersecting })
+          shallUnobserve && entry.isIntersecting && observer.unobserve(entry.target) && unobservedCount++
+          elements.length === unobservedCount && observer.disconnect()
+        })
+      },
+      {
+        rootMargin: `${threshold}px 0px`
+      }
+    )
+    elements.forEach(el => observer.observe(el))
   }
 }
 
@@ -35,7 +43,7 @@ const animation = {
       player.addEventListener('DOMLoaded', () => {
         helpers.initIsVisibleObserver({
           callback: ({ isVisible }) => isVisible ? player.play() : player.stop(),
-          element,
+          elements: [element],
           shallDisconnect: false
         })
       })
@@ -44,9 +52,20 @@ const animation = {
   init: () => {
     helpers.initIsVisibleObserver({
       callback: animation.observerCallback,
-      element: document.querySelector('.animation')
+      elements: [document.querySelector('.animation')]
     })
   }
 }
 
+const backgroundImageLazyLoad = {
+  init: () => {
+    helpers.initIsVisibleObserver({
+      callback: ({ element, isVisible }) => isVisible && element.removeAttribute('data-background-lazy-load'),
+      elements: document.querySelectorAll('[data-background-lazy-load]'),
+      threshold: 500
+    })
+  },
+}
+
 animation.init()
+backgroundImageLazyLoad.init()

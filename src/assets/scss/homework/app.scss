@@ -39,6 +39,10 @@
 @import "modules/_magnific";
 @import "modules/_animation";
 
+[data-background-lazy-load] {
+	background: none !important;
+}
+
 .overlay {
 	display: none;
 	position: fixed;
