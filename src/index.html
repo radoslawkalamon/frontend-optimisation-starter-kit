@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://embed.tawk.to" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://js.stripe.com" />
     <link rel="preload" href="/assets/fonts/montserrat-variable-basic-latin.woff2" as="font" crossorigin fetchpriority="high" type="font/woff2" />
     <link rel="preload" href="/assets/images/homework/logo.svg" as="image" fetchpriority="high" />
     <link rel="preload" href="/assets/images/homework/banner.webp" as="image" fetchpriority="high" />
@@ -32,7 +33,6 @@
     <link href="/favicon.ico" rel="icon" />
     <link href="/assets/css/homework/app.css" rel="stylesheet" fetchpriority="high" />
 
-    <script src="https://js.stripe.com/v3/" fetchpriority="low" defer></script>
     <script type="module" src="/assets/js/homework/home.mjs" fetchpriority="low" defer></script>
     <script type="module" src="/assets/js/homework/global.mjs" fetchpriority="low" defer></script>
     <script src="https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default" charset="UTF-8" crossorigin="*" fetchpriority="low" defer></script>
@@ -237,7 +237,7 @@
     <div class="l-shortcuts l-shortcuts--home">
       <div class="layout">
         <ul>
-          <li><a class="js-popup" data-inline-popup="true" title="See the demo" href="#popup">See the demo</a></li>
+          <li><a data-load-stripe class="js-popup" data-inline-popup="true" title="See the demo" href="#popup">See the demo</a></li>
           <li><a title="Take the Product Tour" class="popup" href="https://www.youtube.com/watch?v=4ypqTZcM-9M">Take the Product Tour</a></li>
         </ul>
       </div>
@@ -264,11 +264,12 @@
             <label for="iban-element">
               IBAN
             </label>
-            <div id="iban-element">
-              <!-- A Stripe Element will be inserted here. -->
-            </div>
+            <div id="iban-element"></div>
+            <div id="iban-bank-name" class="form__bank-name"></div>
+            <div id="iban-error-message" class="form__error-message"></div>
           </div>
-          <div id="bank-name"></div>
+          
+          <div id="error-message" class="form__error-message"></div>
 
           <button class="btn btn--bg-darkblue btn--border-blue" type="submit">Submit Payment</button>
         </form>
