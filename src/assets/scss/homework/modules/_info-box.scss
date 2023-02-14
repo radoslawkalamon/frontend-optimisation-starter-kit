@@ -69,7 +69,7 @@
 	.btn {
 		margin: 0;
 		opacity: 1;
-		transition: opacity 0.5s ease 0.5s;
+		transition: opacity 0.5s ease 0.5s, background-position 0.2s ease-out;
 
 		@media screen and (min-width: map.get($breakpoints, "WVGA")) {
 			opacity: 0;

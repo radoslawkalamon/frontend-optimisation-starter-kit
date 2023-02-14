@@ -1,101 +1,114 @@
 .btn {
+  background-origin: border-box;
+  border: $button-border-size solid transparent;
+	border-radius: 40px;
+  box-shadow: $button-border-size 1000px 1px $white inset;
+	color: $navyblue;
 	display: inline-block;
-
+	font-size: 19px;
+	font-weight: 600;
+	line-height: 1;
 	margin: 0.2em 0.5em 0.2em 0;
-	padding:2px;
-	@include border-radius(40px);
-	background-size: cover;
-
-
-	@include transition(background, 0.2s, ease-out);
-
-	span {
-		display: inline-block;
-		padding: 8px 19px;
-		@include border-radius(40px);
-
-		font-size: 19px;
-		text-align: center;
-		font-weight: 600;
-
-		@include transition(background, 0.2s, ease-out);
-	}
-
-
-	&.btn--big span {
-		font-size: 25px;
-	}
-
-	&.btn--transparent-white {
-		span{
-			color: #fff;
-		}
-		&:hover span {
-			color:#d1f6ff;
-		}
-	}
-
-	/* backgrounds settings */
-	&.btn--bg-white {
-		span {
-			background: #fff;
-			color: #0f80c4;
-		}
-	}
-
-
-	&.btn--bg-black {
-		span {
-			background: $darkgrey3;
-			color: #fff;
-		}
-
-
-		&:hover span {
-			background: #333;
-			color: #ededed;
-		}
-
-		&:active span {
-			text-shadow:0 1px 1px $black;
-		}
-	}
-
-
-	&.btn--bg-darkblue {
-		span {
-			background: rgba(1,73,117, 1);
-			color: #fff;
-		}
-
-		&:hover span {
-			background: rgba(3,93,148, 1);
-		}
-	}
-
-
-	/* borders settings */
-    $colorList:
-    "blue"   $blue,
-    "red"    $red,
-    "orange" $orange,
-    "green"  $green
-    ;
-
-    @each $i in $colorList {
-        &.btn--border-#{nth($i,1)} {
-            background: #{nth($i,2)};
-            background: url('/assets/images/homework/btn-grad-#{nth($i,1)}.svg');
-        }
-    }
-
+	padding: 0.5em 1em;
+	text-align: center;
+	transition: box-shadow 0.2s ease-out, background-position 0.2s ease-out;
 
 	&:hover {
+		color: inherit;
 		background-position: -200px;
 	}
 
-}
+	&.btn--big {
+		font-size: 25px;
+	}
 
+	&.btn--bg-transparent {
+		box-shadow: none;
+		color: $white;
+
+		&:hover {
+			color: $lightblue;
+		}
+	}
+
+	&.btn--bg-darkblue {
+		box-shadow: $button-border-size 1000px 1px $navyblue inset;
+		color: $white;
+
+		&:hover {
+			box-shadow: $button-border-size 1000px 1px #035d94 inset;
+		}
+	}
+
+	&.btn--bg-white {
+		box-shadow: $button-border-size 1000px 1px $white inset;
+		color: $blue1;
+
+		&:hover {
+			box-shadow: $button-border-size 1000px 1px $lightblue inset;
+		}
+	}
+
+	&.btn--bg-black {
+		box-shadow: $button-border-size 1000px 1px $darkgrey3 inset;
+		color: $white;
+
+		&:hover {
+			box-shadow: $button-border-size 1000px 1px #333 inset;
+		}
+	}
+
+	&.btn--border-blue {
+		background-image: url('/assets/images/homework/btn-grad-blue.svg');
+	}
+
+	&.btn--border-red {
+		background-image: url('/assets/images/homework/btn-grad-red.svg');
+	}
+
+	&.btn--border-orange {
+		background-image: url('/assets/images/homework/btn-grad-orange.svg');
+	}
+
+	&.btn--border-green {
+		background-image: url('/assets/images/homework/btn-grad-green.svg');
+	}
+
+	&.btn--arrow-down {
+		align-items: center;
+		aspect-ratio: 1 / 1;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		width: 32px;
+	
+		&::before {
+			transform: translateY(-1px);
+			content: url(/assets/images/homework/btn-arrow-down.svg);
+		}
+	}
+	
+	&.btn--play {
+		align-items: center;
+		aspect-ratio: 1 / 1;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		width: 80px;
+	
+		&::before {
+			border-bottom: 1em solid transparent;
+			border-left: 1.625em solid $blue1;
+			border-top: 1em solid transparent;
+			content: '';
+			height: 0;
+			width: 0;
+			transform: translateX(0.125em);
+		}
+	}
+}
 
 .btn--left-sep {
 	&:before {
@@ -106,54 +119,5 @@
 		height: 38px;
 		background: #383838;
 		margin: 0 20px;
-	}
-}
-
-
-
-.btn--arrow-down {
-	border-radius: 50%;
-
-	span {
-		width: 25px;
-		height: 25px;
-		padding: 0;
-		border-radius: 50%;
-		text-indent: -9999px;
-		background: rgba(1,73,117, 1) url(/assets/images/homework/btn-arrow-down.svg) center center no-repeat;
-		background-size: 14px 10px;
-	}
-
-	&:hover {
-		span {
-			background-color: rgba(3,93,148, 1);
-		}
-	}
-}
-
-.btn-play {
-	align-items: center;
-	aspect-ratio: 1 / 1;
-	background-color: rgba($white, 0.75);
-	border: 2px solid $blue1;
-	border-radius: 50%;
-	box-sizing: border-box;
-	display: flex;
-	justify-content: center;
-	transition: background-color 0.25s ease;
-	width: 80px;
-
-	&::before {
-		border-bottom: 1em solid transparent;
-		border-left: 1.625em solid $blue1;
-		border-top: 1em solid transparent;
-		content: '';
-		height: 0;
-		width: 0;
-		transform: translateX(0.125em);
-	}
-	
-	&:hover {
-		background-color: rgba($white, 1);
 	}
 }

@@ -21,7 +21,7 @@
 
 	/* white set */
 	&.white a {
-		border: 2px solid #d2d2d2;
+		border: $button-border-size solid #d2d2d2;
 
 		&:hover {
 			border-color: $grey;
@@ -30,7 +30,7 @@
 
 	/* grey set */
 	&.grey a {
-		border: 2px solid #575757;
+		border: $button-border-size solid #575757;
 
 		&:hover {
 			border-color: #fff;

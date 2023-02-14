@@ -27,7 +27,7 @@
 		display: none;
 
 		@media screen and (min-width: map.get($breakpoints, "WVGA")) {
-			display: block;
+			display: flex;
 			position: absolute;
 			bottom: 2em;
 			left: 50%;

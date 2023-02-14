@@ -120,14 +120,9 @@ const addTargetBlankToExternalLinks = () => {
   $('a[rel="external"]').attr('target', '_blank');
 }
 
-const wrapButtonsInner = () => {
-  $('.btn').wrapInner('<span />');
-}
-
 // Init Global
 initializeMegaMenu();
 initializeSearchBar();
 initializeBurgerMenu();
 scrollToHashURL();
 addTargetBlankToExternalLinks();
-wrapButtonsInner();
