@@ -19,7 +19,6 @@
 
 const gulp                      = require('gulp'),
       del                       = require('del'),
-      sourcemaps                = require('gulp-sourcemaps'),
       plumber                   = require('gulp-plumber'),
       autoprefixer              = require('gulp-autoprefixer'),
       minifyCss                 = require('gulp-clean-css'),
