@@ -25,10 +25,6 @@
 	&--bg-transparent {
 		box-shadow: none;
 		color: $white;
-
-		&:hover {
-			color: $lightblue;
-		}
 	}
 
 	&--bg-darkblue {
