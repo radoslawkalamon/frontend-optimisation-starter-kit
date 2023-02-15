@@ -40,532 +40,533 @@
   </head>
   <body>
     <div class="overlay"></div>
-    <div class="search">
-      <div class="layout3 text text--bg-grey">
-        <a class="btn-close search__btn-close" href="javascript:;">Close</a>
-        <p>Search and hit enter</p>
-        <form action="/search" method="get">
-          <input type="text" name="phrase" id="phrase" placeholder="What are you looking for?" />
-          <button class="search__submit" type="submit" title="Submit">Search</button>
-        </form>
-      </div>
-    </div>
-
-    <nav class="l-navbar">
-      <a class="logo" href="/">
-        <img src="/assets/images/homework/logo.svg" width="120" height="58" alt="Web Dev Insider" title="Web Dev Insider" />
-      </a>
-
-      <ul class="navbar-menu">
-        <li class="navbar-menu__dropdown"><a id="item-1" href="#">Platform</a></li>
-        <li class="navbar-menu__dropdown"><a id="item-2" href="#">Solutions</a></li>
-        <li class="navbar-menu__dropdown"><a id="item-3" href="#">Services</a></li>
-        <li><a title="Log in" href="/">Log in</a></li>
-        <li><a title="Contact" href="/">Contact</a></li>
-        <li>
-          <a class="navbar-menu__search js-open-searchbar" href="#" title="What are you looking for?"><span>Search</span></a>
-        </li>
-      </ul>
-      <a title="Menu" class="l-navbar__burger" href="javascript:;">Menu</a>
-    </nav>
-    <div class="l-megamenu">
-      <div class="layout">
-        <a class="btn-close js-close-megamenu" href="">Close</a>
-        <div class="l-megamenu__layer" id="megamenu-item-1">
-          <div class="col-65 l-megamenu__links left">
-            <ul>
-              <li><a href="/">Platform Overview</a></li>
-              <li><a href="/">Management Center</a></li>
-              <li>
-                <a title="Modules" href="/">Modules</a>
-                <ul>
-                  <li><a href="/">Capture</a></li>
-                  <li><a href="/">Storage</a></li>
-                  <li><a href="/">Interaction Analytics</a></li>
-                </ul>
-              </li>
-              <li><a title="Cloud" href="/">Cloud</a></li>
-            </ul>
-          </div>
-          <div class="col-35 text right">
-            <div>
-              <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="">White papers</a></div>
-              <h2 class="headline-2">Some super interesting resource to download</h2>
-              <p class="small-text">
-                <img
-                  src="/assets/images/homework/posts/post.thumbnail.2x.webp"
-                  srcset="/assets/images/homework/posts/post.thumbnail.1x.webp 1x, /assets/images/homework/posts/post.thumbnail.2x.webp 2x"
-                  class="l-megamenu__image"
-                  decoding="async"
-                  loading="lazy"
-                  alt=""
-                  style="aspect-ratio: 20 / 17"
-                />
-                Just download it and enjoy.
-              </p>
-              <p>
-                <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now: Ovum Report - Vodafone in-network call recording">Download now</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="l-megamenu__layer" id="megamenu-item-2">
-          <div class="col-65 l-megamenu__links left">
-            <ul>
-              <li><a href="/">Solution Overview</a></li>
-              <li>
-                <a title="Call recording" href="/">Call recording</a>
-                <ul>
-                  <li><a title="Mobile recording" href="/">Mobile recording</a></li>
-                  <li><a title="Fixed-Line recording" href="/">Fixed-Line recording</a></li>
-                  <li><a title="Multi-channel recording" href="/">Multi-channel recording</a></li>
-                </ul>
-              </li>
-              <li><a title="Interaction Analytics" href="/">Interaction Analytics</a></li>
-              <li>
-                <a title="PCI Compliance" href="/">PCI Compliance</a>
-                <ul>
-                  <li><a title="Live - DTMF" href="/">Live - DTMF</a></li>
-                  <li><a title="Automate" href="/">Automate</a></li>
-                  <li><a title="Archive" href="/">Archive</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-35 text right">
-            <div>
-              <div class="item__category item__category--79 l-megamenu__cat"><a title="eBooks" href="/">eBooks</a></div>
-              <h2 class="headline-2">PCI DSS and the contact center</h2>
-              <p class="small-text">Some text is here so you are impressed and you will click the button below.</p>
-              <p>
-                <a class="btn btn--bg-darkblue btn--border-blue" href="/2" title="Download now">Download now</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="l-megamenu__layer" id="megamenu-item-3">
-          <div class="col-65 l-megamenu__links left">
-            <ul>
-              <li><a title="Support" href="/">Support</a></li>
-              <li><a title="Training" href="/">Training</a></li>
-              <li><a title="Consulting" href="/">Consulting</a></li>
-            </ul>
-          </div>
-          <div class="col-35 text right">
-            <div>
-              <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="/">White papers</a></div>
-              <h2 class="headline-2">Report about mobile payment gateways</h2>
-              <p class="small-text">
-                <img
-                  src="/assets/images/homework/posts/post2.thumbnail.2x.webp"
-                  srcset="/assets/images/homework/posts/post2.thumbnail.1x.webp 1x, /assets/images/homework/posts/post2.thumbnail.2x.webp 2x"
-                  class="l-megamenu__image"
-                  decoding="async"
-                  loading="lazy"
-                  alt=""
-                  style="aspect-ratio: 16 / 10"
-                />
-                An MNO service that doesn&#39;t require a SIM change
-              </p>
-              <p>
-                <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now">Download now</a>
-              </p>
-            </div>
-          </div>
+    <header>
+      <div class="search">
+        <div class="layout3 text text--bg-grey">
+          <a class="btn-close search__btn-close" href="javascript:;">Close</a>
+          <p>Search and hit enter</p>
+          <form action="/search" method="get">
+            <input type="text" name="phrase" id="phrase" placeholder="What are you looking for?" />
+            <button class="search__submit" type="submit" title="Submit">Search</button>
+          </form>
         </div>
       </div>
-    </div>
+      <nav class="l-navbar">
+        <a class="logo" href="/">
+          <img src="/assets/images/homework/logo.svg" width="120" height="58" alt="Web Dev Insider" title="Web Dev Insider" />
+        </a>
 
-    <header class="l-home-banner">
-      <div class="layout">
-        <div class="home-banner__content text">
-          <h1 class="headline-1">
-            Seamless<br />
-            payment option
-          </h1>
-          <p>It is an online payment tool that makes collecting by Direct Debit easy for everyone from individuals to large cooperations at 1% fee per transaction.</p>
-          <div class="l-home-banner__3-cols">
-            <div>
-              <p>Cloud PCI Payment processing solution</p>
-            </div>
-            <div>
-              <p>
-                  Cloud voice<br />
-                  solution
-              </p>
-            </div>
-            <div>
-              <p>Cloud Speech Analytics</p>
-            </div>
-          </div>
-          <p><a class="btn btn--bg-darkblue btn--border-blue popup" href="https://www.youtube.com/watch?v=4ypqTZcM-9M">Watch video</a><a class="btn btn--bg-transparent" href="">or Contact us</a></p>
-        </div>
-
-        <div class="home-banner__anim">
-          <img id="resizer" src="/assets/images/homework/anim/empty-block.png" alt="Empty block" />
-          <img id="shadow" src="/assets/images/homework/anim/shadow.png" alt="Shadow" />
-          <img id="rainbow" src="/assets/images/homework/anim/rainbow.png" alt="Rainbow" />
-          <img id="pc" src="/assets/images/homework/anim/pc.png" alt="PC" />
-          <img id="social" src="/assets/images/homework/anim/social.png" alt="Social media" />
-          <img id="mobile" src="/assets/images/homework/anim/mobile.png" alt="Mobile" />
-          <img id="card-base" src="/assets/images/homework/anim/card-base.png" alt="Card base" />
-          <img id="card-chip" src="/assets/images/homework/anim/card-chip.png" alt="Card chip" />
-          <img id="cloud" src="/assets/images/homework/anim/cloud.png" alt="Cloud" />
-          <img id="chart-base" src="/assets/images/homework/anim/chart-base.png" alt="Chart base" />
-          <img id="chart-1" src="/assets/images/homework/anim/chart-1.webp" alt="Chart 1" />
-          <img id="chart-2" src="/assets/images/homework/anim/chart-2.webp" alt="Chart 2" />
-          <img id="chart-3" src="/assets/images/homework/anim/chart-3.webp" alt="Chart 3" />
-          <img id="email" src="/assets/images/homework/anim/email.png" alt="Email" />
-        </div>
-      </div>
-      <a title="Slide down" class="btn btn--border-blue btn--bg-darkblue btn--arrow-down" href="#main"></a>
-    </header>
-    <div class="l-shortcuts l-shortcuts--home">
-      <div class="layout">
-        <ul>
-          <li><a data-load-stripe class="js-popup" data-inline-popup="true" title="See the demo" href="#popup">See the demo</a></li>
-          <li><a title="Take the Product Tour" class="popup" href="https://www.youtube.com/watch?v=4ypqTZcM-9M">Take the Product Tour</a></li>
+        <ul class="navbar-menu">
+          <li class="navbar-menu__dropdown"><a id="item-1" href="#">Platform</a></li>
+          <li class="navbar-menu__dropdown"><a id="item-2" href="#">Solutions</a></li>
+          <li class="navbar-menu__dropdown"><a id="item-3" href="#">Services</a></li>
+          <li><a title="Log in" href="/">Log in</a></li>
+          <li><a title="Contact" href="/">Contact</a></li>
+          <li>
+            <a class="navbar-menu__search js-open-searchbar" href="#" title="What are you looking for?"><span>Search</span></a>
+          </li>
         </ul>
-      </div>
-
-      <div class="mfp-hide popup-form-container" id="popup">
-        <h2 class="headline-2">Payment Gateway demo</h2>
-
-        <form class="form" action="/charge" method="post" id="payment-form">
-          <div class="form__row">
-            <label for="name">
-              Name
-            </label>
-            <input id="name" name="name" type="text" placeholder="Jenny Rosen" required />
-          </div>
-
-          <div class="form__row">
-            <label for="email">
-              Email Address
-            </label>
-            <input id="email" name="email" type="email" placeholder="jenny.rosen@example.com" required />
-          </div>
-
-          <div class="form__row">
-            <label for="iban-element">
-              IBAN
-            </label>
-            <div id="iban-element"></div>
-            <div id="iban-bank-name" class="form__bank-name"></div>
-            <div id="iban-error-message" class="form__error-message"></div>
-          </div>
-          
-          <div id="error-message" class="form__error-message"></div>
-
-          <button class="btn btn--bg-darkblue btn--border-blue" type="submit">Submit Payment</button>
-        </form>
-      </div>
-    </div>
-    <div class="l-main" id="main">
-      <div class="page-section page-section--video">
+        <a title="Menu" class="l-navbar__burger" href="javascript:;">Menu</a>
+      </nav>
+      <nav class="l-megamenu">
         <div class="layout">
-          <h2 class="headline-2">Find out more</h2>
-          <a
-            class="home-video popup"
-            href="https://www.youtube.com/watch?v=W9-dlonF1JE"
-            title="Play video: LEKCJA DEMO: Po co optymalizować front-end (🚀 ZOPTYMALIZOWANY FRONTEND)"
-          >
-            <img
-              alt="Video: LEKCJA DEMO: Po co optymalizować front-end (🚀 ZOPTYMALIZOWANY FRONTEND)"
-              class="home-video__thumbnail"
-              decoding="async"
-              loading="lazy"
-              src="/assets/images/homework/home-youtube-video-thumbnail.webp"
-            />
-            <div class="btn btn--border-blue btn--bg-white btn--play home-video__btn-play"></div>
-          </a>
-        </div>
-      </div>
-
-      <!-- services boxes -->
-      <div class="page-section page-section--services text">
-        <div class="layout">
-          <section class="col-25 left">
-            <div>
-              <figure>
-                <img src="/assets/images/homework/i/slideshow/pci-compliance-45db.webp" width="175" height="167" decoding="async" loading="lazy" alt="" />
-              </figure>
-              <h2 class="headline-2">
-                PCI<br />
-                Compliance
-              </h2>
-              <p class="small-text">
-                Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. <br />
-                <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
-              </p>
-            </div>
-          </section>
-          <section class="col-25 left">
-            <div>
-              <figure>
-                <img src="/assets/images/homework/i/slideshow/call-recording-4d00.webp" width="175" height="167" decoding="async" loading="lazy" alt="" />
-              </figure>
-              <h2 class="headline-2">Voice and data recording solutions</h2>
-              <p class="small-text">
-                Vestibulum commodo volutpat a, convallis ac, laoreet enim.<br />
-                <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
-              </p>
-            </div>
-          </section>
-          <section class="col-25 left">
-            <div>
-              <figure>
-                <img src="/assets/images/homework/i/slideshow/interaction-analytics-4124.webp" width="175" height="167" decoding="async" loading="lazy" alt="" />
-              </figure>
-              <h2 class="headline-2">Interaction analytics solutions</h2>
-              <p class="small-text">
-                Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus.<br />
-                <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
-              </p>
-            </div>
-          </section>
-          <section class="col-25 left">
-            <div>
-              <figure>
-                <img src="/assets/images/homework/i/slideshow/platform-cloud-enabled-f7b0.webp" width="175" height="167" decoding="async" loading="lazy" alt="" />
-              </figure>
-              <h2 class="headline-2">
-                Platform <br />
-                cloud-enabled solutions
-              </h2>
-              <p class="small-text">
-                Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu.<br />
-                <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
-              </p>
-            </div>
-          </section>
-        </div>
-      </div>
-      <!-- // -->
-      <div class="page-section page-section--global-map page-section--global-map__home page-section--triangle-white" data-background-lazy-load>
-        <div class="layout">
-          <h3 class="headline-3">
-            Global cloud-based solution <br />
-            for your online business.
-          </h3>
-        </div>
-      </div>
-      <!-- section with slider -->
-      <div class="page-section page-section--bg-dark" data-background-lazy-load>
-        <div class="slider-full-width" id="slider">
-          <div class="layout2">
-            <!-- custom buttons prev/next -->
-            <i class="slider-btn btn-arrow big grey btn-arrow--left"></i>
-            <i class="slider-btn btn-arrow big grey btn-arrow--right"></i>
-            <!-- // -->
-            <!-- slides -->
-            <div id="slider-features" class="text text--bg-grey">
-              <section>
-                <figure>
-                  <img src="/assets/images/homework/i/slideshow/slider-capture-0f4c.png" decoding="async" loading="lazy" alt="" />
-                </figure>
-                <div>
-                  <span class="headline-4 blue">Capture</span>
-                  <h3 class="headline-5">
-                    all voice and data<br />
-                    communications<br />
-                    and interactions
-                  </h3>
-                  <p class="medium-text">
-                    Quisque cursus et, porttitor risus.
-                  </p>
-                  <p>
-                    <a title="Find out more" class="btn btn--bg-black btn--border-blue" href="/">Find out more</a>
-                  </p>
-                </div>
-              </section>
-              <section>
-                <figure>
-                  <img src="/assets/images/homework/i/slideshow/slider-store-c81d.png" decoding="async" loading="lazy" alt="" />
-                </figure>
-                <div>
-                  <span class="headline-4 green">Store</span>
-                  <h3 class="headline-5">
-                    communications data<br />
-                    and call recordings<br />
-                    securely
-                  </h3>
-                  <p class="medium-text">
-                    in policy-enforced on-premise data centers or in the cloud.
-                  </p>
-                  <p>
-                    <a title="Find out more" class="btn btn--bg-black btn--border-green" href="/">Find out more</a>
-                  </p>
-                </div>
-              </section>
-              <section>
-                <figure>
-                  <img src="/assets/images/homework/i/slideshow/slider-analyze-cbfa.png" decoding="async" loading="lazy" alt="" />
-                </figure>
-                <div>
-                  <span class="headline-4 orange">Analyze</span>
-                  <h3 class="headline-5">
-                    all communications<br />
-                    in real-time or across<br />
-                    all time
-                  </h3>
-                  <p class="medium-text">
-                    Aliquam sem. In hendrerit nulla quam nunc.
-                  </p>
-                  <p>
-                    <a title="Find out more" class="btn btn--bg-black btn--border-orange" href="/">Find out more</a>
-                  </p>
-                </div>
-              </section>
-              <section>
-                <figure>
-                  <img src="/assets/images/homework/i/slideshow/slider-consume-e378.png" decoding="async" loading="lazy" alt="" />
-                </figure>
-                <div>
-                  <span class="headline-2 red">Consume</span>
-                  <h3 class="headline-5">
-                    Event driven<br />
-                    integration
-                  </h3>
-                  <p class="medium-text">
-                    Lorem ipsum primis in nibh vel risus. Sed vel lectus.
-                  </p>
-                  <p>
-                    <a title="Find out more" class="btn btn--bg-black btn--border-red" href="/">Find out more</a>
-                  </p>
-                </div>
-              </section>
-            </div>
-            <!-- // -->
-            <!-- slider's pager -->
-            <div id="slider-features-pager" class="slider-full-width__pager">
+          <a class="btn-close js-close-megamenu" href="">Close</a>
+          <div class="l-megamenu__layer" id="megamenu-item-1">
+            <div class="col-65 l-megamenu__links left">
               <ul>
-                <li><a class="blue active" data-slide-index="0" href="#">Capture</a></li>
-                <li><a class="green active" data-slide-index="1" href="#">Store</a></li>
-                <li><a class="orange active" data-slide-index="2" href="#">Analyze</a></li>
-                <li><a class="red active" data-slide-index="3" href="#">Consume</a></li>
+                <li><a href="/">Platform Overview</a></li>
+                <li><a href="/">Management Center</a></li>
+                <li>
+                  <a title="Modules" href="/">Modules</a>
+                  <ul>
+                    <li><a href="/">Capture</a></li>
+                    <li><a href="/">Storage</a></li>
+                    <li><a href="/">Interaction Analytics</a></li>
+                  </ul>
+                </li>
+                <li><a title="Cloud" href="/">Cloud</a></li>
               </ul>
             </div>
-            <!-- // -->
+            <div class="col-35 text right">
+              <div>
+                <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="">White papers</a></div>
+                <h2 class="headline-2">Some super interesting resource to download</h2>
+                <p class="small-text">
+                  <img
+                    src="/assets/images/homework/posts/post.thumbnail.2x.webp"
+                    srcset="/assets/images/homework/posts/post.thumbnail.1x.webp 1x, /assets/images/homework/posts/post.thumbnail.2x.webp 2x"
+                    class="l-megamenu__image"
+                    decoding="async"
+                    loading="lazy"
+                    alt=""
+                    style="aspect-ratio: 20 / 17"
+                  />
+                  Just download it and enjoy.
+                </p>
+                <p>
+                  <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now: Ovum Report - Vodafone in-network call recording">Download now</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="l-megamenu__layer" id="megamenu-item-2">
+            <div class="col-65 l-megamenu__links left">
+              <ul>
+                <li><a href="/">Solution Overview</a></li>
+                <li>
+                  <a title="Call recording" href="/">Call recording</a>
+                  <ul>
+                    <li><a title="Mobile recording" href="/">Mobile recording</a></li>
+                    <li><a title="Fixed-Line recording" href="/">Fixed-Line recording</a></li>
+                    <li><a title="Multi-channel recording" href="/">Multi-channel recording</a></li>
+                  </ul>
+                </li>
+                <li><a title="Interaction Analytics" href="/">Interaction Analytics</a></li>
+                <li>
+                  <a title="PCI Compliance" href="/">PCI Compliance</a>
+                  <ul>
+                    <li><a title="Live - DTMF" href="/">Live - DTMF</a></li>
+                    <li><a title="Automate" href="/">Automate</a></li>
+                    <li><a title="Archive" href="/">Archive</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="col-35 text right">
+              <div>
+                <div class="item__category item__category--79 l-megamenu__cat"><a title="eBooks" href="/">eBooks</a></div>
+                <h2 class="headline-2">PCI DSS and the contact center</h2>
+                <p class="small-text">Some text is here so you are impressed and you will click the button below.</p>
+                <p>
+                  <a class="btn btn--bg-darkblue btn--border-blue" href="/2" title="Download now">Download now</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="l-megamenu__layer" id="megamenu-item-3">
+            <div class="col-65 l-megamenu__links left">
+              <ul>
+                <li><a title="Support" href="/">Support</a></li>
+                <li><a title="Training" href="/">Training</a></li>
+                <li><a title="Consulting" href="/">Consulting</a></li>
+              </ul>
+            </div>
+            <div class="col-35 text right">
+              <div>
+                <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="/">White papers</a></div>
+                <h2 class="headline-2">Report about mobile payment gateways</h2>
+                <p class="small-text">
+                  <img
+                    src="/assets/images/homework/posts/post2.thumbnail.2x.webp"
+                    srcset="/assets/images/homework/posts/post2.thumbnail.1x.webp 1x, /assets/images/homework/posts/post2.thumbnail.2x.webp 2x"
+                    class="l-megamenu__image"
+                    decoding="async"
+                    loading="lazy"
+                    alt=""
+                    style="aspect-ratio: 16 / 10"
+                  />
+                  An MNO service that doesn&#39;t require a SIM change
+                </p>
+                <p>
+                  <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now">Download now</a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- // -->
-      <!-- advantages boxes -->
-      <div class="page-section page-section--network page-section--triangle-black text" data-background-lazy-load>
+      </nav>
+    </header>
+    <main>
+      <section class="l-home-banner">
         <div class="layout">
-          <section class="col-33 left">
-            <div>
-              <h4 class="headline-2">
-                Only pay for what<br />
-                you use
-              </h4>
-              <p class="medium-text">
-                Scale up or down to manage traffic peaks or changing business needs
-              </p>
-            </div>
-          </section>
-          <section class="col-33 left">
-            <div>
-              <h4 class="headline-2">
-                World leading<br />
-                security
-              </h4>
-              <p class="medium-text">
-                Communications Intelligence Platform is PCI DSS Level 1 compliant
-              </p>
-              <p>
-                <a title="Find out more" class="btn btn--bg-darkblue btn--border-blue" href="/">Find out more</a>
-              </p>
-            </div>
-          </section>
-          <section class="col-33 left">
-            <div>
-              <h4 class="headline-2">
-                Truly global<br />
-                coverage
-              </h4>
-              <p class="medium-text">
-                With resilient and compliant local delivery across 22 territories worldwide
-              </p>
-            </div>
-          </section>
-        </div>
-      </div>
-      <!-- // -->
-      <!-- text sextion -->
-      <article class="page-section page-section--home-light-bg" data-background-lazy-load>
-        <div class="layout3">
-          <div class="text">
-            <h4 class="headline-6">Bold. Secure. The best.</h4>
-            <p>The best solution on the market.</p>
-          </div>
-          <div class="info-box">
-            <div class="info-box__light text col-35 left">
+          <div class="home-banner__content text">
+            <h1 class="headline-1">
+              Seamless<br />
+              payment option
+            </h1>
+            <p>It is an online payment tool that makes collecting by Direct Debit easy for everyone from individuals to large cooperations at 1% fee per transaction.</p>
+            <div class="l-home-banner__3-cols">
+              <div>
+                <p>Cloud PCI Payment processing solution</p>
+              </div>
               <div>
                 <p>
-                  In 2013, Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in,
-                  purus. Integer ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing.
+                    Cloud voice<br />
+                    solution
                 </p>
-                <p><a class="btn btn--bg-white btn--border-blue" href="/">Our Accreditations</a></p>
               </div>
-            </div>
-            <div class="info-box__blue col-60 right">
               <div>
-                <div class="left col-65 text text--bg-blue">
-                  <ul>
-                    <li>
-                      Greater flexibility and lower cost than on-premise solutions
-                    </li>
-                    <li>
-                      Rich, real-time and legacy data capture and analysis across media channels
-                    </li>
-                    <li>
-                      Removes enterprise risk and boosts customer service
-                    </li>
-                    <li>
-                      Supports local to global business and regulatory needs through a single platform
-                    </li>
-                  </ul>
-                </div>
-                <div class="info-box__product-tour col-35 left">
-                  <img src="/assets/images/homework/slider-store.png" decoding="async" loading="lazy" alt="" />
-                  <a class="btn btn--bg-darkblue btn--border-blue popup" href="https://www.youtube.com/watch?v=KCK0PqiJbA0">Product Tour</a>
-                </div>
+                <p>Cloud Speech Analytics</p>
               </div>
             </div>
+            <p><a class="btn btn--bg-darkblue btn--border-blue popup" href="https://www.youtube.com/watch?v=4ypqTZcM-9M">Watch video</a><a class="btn btn--bg-transparent" href="">or Contact us</a></p>
+          </div>
+
+          <div class="home-banner__anim">
+            <img id="resizer" src="/assets/images/homework/anim/empty-block.png" alt="Empty block" />
+            <img id="shadow" src="/assets/images/homework/anim/shadow.png" alt="Shadow" />
+            <img id="rainbow" src="/assets/images/homework/anim/rainbow.png" alt="Rainbow" />
+            <img id="pc" src="/assets/images/homework/anim/pc.png" alt="PC" />
+            <img id="social" src="/assets/images/homework/anim/social.png" alt="Social media" />
+            <img id="mobile" src="/assets/images/homework/anim/mobile.png" alt="Mobile" />
+            <img id="card-base" src="/assets/images/homework/anim/card-base.png" alt="Card base" />
+            <img id="card-chip" src="/assets/images/homework/anim/card-chip.png" alt="Card chip" />
+            <img id="cloud" src="/assets/images/homework/anim/cloud.png" alt="Cloud" />
+            <img id="chart-base" src="/assets/images/homework/anim/chart-base.png" alt="Chart base" />
+            <img id="chart-1" src="/assets/images/homework/anim/chart-1.webp" alt="Chart 1" />
+            <img id="chart-2" src="/assets/images/homework/anim/chart-2.webp" alt="Chart 2" />
+            <img id="chart-3" src="/assets/images/homework/anim/chart-3.webp" alt="Chart 3" />
+            <img id="email" src="/assets/images/homework/anim/email.png" alt="Email" />
           </div>
         </div>
-      </article>
-      <!-- // -->
-      <!-- customers -->
-      <section class="page-section page-section--customers" data-background-lazy-load>
+        <a title="Slide down" class="btn btn--border-blue btn--bg-darkblue btn--arrow-down" href="#main"></a>
+      </section>
+      <section class="l-shortcuts l-shortcuts--home">
         <div class="layout">
-          <div class="text text--bg-blue">
-            <h3 class="headline-3">
-              Hundreds of customers.<br />
-              One Platform.
-            </h3>
-          </div>
-          <ul class="page-section--customers__logos">
-            <li><img src="/assets/images/homework/i/logos/gallery/viking-135-1246.webp" decoding="async" loading="lazy" alt="" /></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/vodafone-135-1a70.webp" decoding="async" loading="lazy" alt="" /></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/sse-135-4e83.webp" decoding="async" loading="lazy" alt="" /></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/investec-135-6def.webp" decoding="async" loading="lazy" alt="" /></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/cowen-group-135-ef66.webp" decoding="async" loading="lazy" alt="" /></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/gatehouse-bank-135-d82b.webp" decoding="async" loading="lazy" alt="" /></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/bgc-135-bb6b.webp" decoding="async" loading="lazy" alt="" /></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/centrica-135-1f68.webp" decoding="async" loading="lazy" alt="" /></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/itg-1352-5e17.webp" decoding="async" loading="lazy" alt="" /></li>
-            <li><img src="/assets/images/homework/i/logos/gallery/bmo-135-78f7.webp" decoding="async" loading="lazy" alt="" /></li>
+          <ul>
+            <li><a data-load-stripe class="js-popup" data-inline-popup="true" title="See the demo" href="#popup">See the demo</a></li>
+            <li><a title="Take the Product Tour" class="popup" href="https://www.youtube.com/watch?v=4ypqTZcM-9M">Take the Product Tour</a></li>
           </ul>
-          <div class="text text--bg-blue page-section--customers__learn">
-            <p><strong>Learn how can help your business.</strong> <a title="Find out more" class="btn btn--bg-darkblue btn--border-blue" href="/">Find out more</a></p>
-          </div>
+        </div>
+
+        <div class="mfp-hide popup-form-container" id="popup">
+          <h2 class="headline-2">Payment Gateway demo</h2>
+
+          <form class="form" action="/charge" method="post" id="payment-form">
+            <div class="form__row">
+              <label for="name">
+                Name
+              </label>
+              <input id="name" name="name" type="text" placeholder="Jenny Rosen" required />
+            </div>
+
+            <div class="form__row">
+              <label for="email">
+                Email Address
+              </label>
+              <input id="email" name="email" type="email" placeholder="jenny.rosen@example.com" required />
+            </div>
+
+            <div class="form__row">
+              <label for="iban-element">
+                IBAN
+              </label>
+              <div id="iban-element"></div>
+              <div id="iban-bank-name" class="form__bank-name"></div>
+              <div id="iban-error-message" class="form__error-message"></div>
+            </div>
+            
+            <div id="error-message" class="form__error-message"></div>
+
+            <button class="btn btn--bg-darkblue btn--border-blue" type="submit">Submit Payment</button>
+          </form>
         </div>
       </section>
-      <!-- // -->
-    </div>
+      <div class="l-main" id="main">
+        <section class="page-section page-section--video">
+          <div class="layout">
+            <h2 class="headline-2">Find out more</h2>
+            <a
+              class="home-video popup"
+              href="https://www.youtube.com/watch?v=W9-dlonF1JE"
+              title="Play video: LEKCJA DEMO: Po co optymalizować front-end (🚀 ZOPTYMALIZOWANY FRONTEND)"
+            >
+              <img
+                alt="Video: LEKCJA DEMO: Po co optymalizować front-end (🚀 ZOPTYMALIZOWANY FRONTEND)"
+                class="home-video__thumbnail"
+                decoding="async"
+                loading="lazy"
+                src="/assets/images/homework/home-youtube-video-thumbnail.webp"
+              />
+              <div class="btn btn--border-blue btn--bg-white btn--play home-video__btn-play"></div>
+            </a>
+          </div>
+        </section>
+        <!-- services boxes -->
+        <section class="page-section page-section--services text">
+          <div class="layout">
+            <section class="col-25 left">
+              <div>
+                <figure>
+                  <img src="/assets/images/homework/i/slideshow/pci-compliance-45db.webp" width="175" height="167" decoding="async" loading="lazy" alt="" />
+                </figure>
+                <h2 class="headline-2">
+                  PCI<br />
+                  Compliance
+                </h2>
+                <p class="small-text">
+                  Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. <br />
+                  <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
+                </p>
+              </div>
+            </section>
+            <section class="col-25 left">
+              <div>
+                <figure>
+                  <img src="/assets/images/homework/i/slideshow/call-recording-4d00.webp" width="175" height="167" decoding="async" loading="lazy" alt="" />
+                </figure>
+                <h2 class="headline-2">Voice and data recording solutions</h2>
+                <p class="small-text">
+                  Vestibulum commodo volutpat a, convallis ac, laoreet enim.<br />
+                  <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
+                </p>
+              </div>
+            </section>
+            <section class="col-25 left">
+              <div>
+                <figure>
+                  <img src="/assets/images/homework/i/slideshow/interaction-analytics-4124.webp" width="175" height="167" decoding="async" loading="lazy" alt="" />
+                </figure>
+                <h2 class="headline-2">Interaction analytics solutions</h2>
+                <p class="small-text">
+                  Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus.<br />
+                  <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
+                </p>
+              </div>
+            </section>
+            <section class="col-25 left">
+              <div>
+                <figure>
+                  <img src="/assets/images/homework/i/slideshow/platform-cloud-enabled-f7b0.webp" width="175" height="167" decoding="async" loading="lazy" alt="" />
+                </figure>
+                <h2 class="headline-2">
+                  Platform <br />
+                  cloud-enabled solutions
+                </h2>
+                <p class="small-text">
+                  Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu.<br />
+                  <a title="Find out more" class="btn btn--bg-white btn--border-blue" href="/">Find out more</a>
+                </p>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- // -->
+        <section class="page-section page-section--global-map page-section--global-map__home page-section--triangle-white" data-background-lazy-load>
+          <div class="layout">
+            <h3 class="headline-3">
+              Global cloud-based solution <br />
+              for your online business.
+            </h3>
+          </div>
+        </section>
+        <!-- section with slider -->
+        <section class="page-section page-section--bg-dark" data-background-lazy-load>
+          <div class="slider-full-width" id="slider">
+            <div class="layout2">
+              <!-- custom buttons prev/next -->
+              <i class="slider-btn btn-arrow big grey btn-arrow--left"></i>
+              <i class="slider-btn btn-arrow big grey btn-arrow--right"></i>
+              <!-- // -->
+              <!-- slides -->
+              <div id="slider-features" class="text text--bg-grey">
+                <section>
+                  <figure>
+                    <img src="/assets/images/homework/i/slideshow/slider-capture-0f4c.png" decoding="async" loading="lazy" alt="" />
+                  </figure>
+                  <div>
+                    <span class="headline-4 blue">Capture</span>
+                    <h3 class="headline-5">
+                      all voice and data<br />
+                      communications<br />
+                      and interactions
+                    </h3>
+                    <p class="medium-text">
+                      Quisque cursus et, porttitor risus.
+                    </p>
+                    <p>
+                      <a title="Find out more" class="btn btn--bg-black btn--border-blue" href="/">Find out more</a>
+                    </p>
+                  </div>
+                </section>
+                <section>
+                  <figure>
+                    <img src="/assets/images/homework/i/slideshow/slider-store-c81d.png" decoding="async" loading="lazy" alt="" />
+                  </figure>
+                  <div>
+                    <span class="headline-4 green">Store</span>
+                    <h3 class="headline-5">
+                      communications data<br />
+                      and call recordings<br />
+                      securely
+                    </h3>
+                    <p class="medium-text">
+                      in policy-enforced on-premise data centers or in the cloud.
+                    </p>
+                    <p>
+                      <a title="Find out more" class="btn btn--bg-black btn--border-green" href="/">Find out more</a>
+                    </p>
+                  </div>
+                </section>
+                <section>
+                  <figure>
+                    <img src="/assets/images/homework/i/slideshow/slider-analyze-cbfa.png" decoding="async" loading="lazy" alt="" />
+                  </figure>
+                  <div>
+                    <span class="headline-4 orange">Analyze</span>
+                    <h3 class="headline-5">
+                      all communications<br />
+                      in real-time or across<br />
+                      all time
+                    </h3>
+                    <p class="medium-text">
+                      Aliquam sem. In hendrerit nulla quam nunc.
+                    </p>
+                    <p>
+                      <a title="Find out more" class="btn btn--bg-black btn--border-orange" href="/">Find out more</a>
+                    </p>
+                  </div>
+                </section>
+                <section>
+                  <figure>
+                    <img src="/assets/images/homework/i/slideshow/slider-consume-e378.png" decoding="async" loading="lazy" alt="" />
+                  </figure>
+                  <div>
+                    <span class="headline-2 red">Consume</span>
+                    <h3 class="headline-5">
+                      Event driven<br />
+                      integration
+                    </h3>
+                    <p class="medium-text">
+                      Lorem ipsum primis in nibh vel risus. Sed vel lectus.
+                    </p>
+                    <p>
+                      <a title="Find out more" class="btn btn--bg-black btn--border-red" href="/">Find out more</a>
+                    </p>
+                  </div>
+                </section>
+              </div>
+              <!-- // -->
+              <!-- slider's pager -->
+              <div id="slider-features-pager" class="slider-full-width__pager">
+                <ul>
+                  <li><a class="blue active" data-slide-index="0" href="#">Capture</a></li>
+                  <li><a class="green active" data-slide-index="1" href="#">Store</a></li>
+                  <li><a class="orange active" data-slide-index="2" href="#">Analyze</a></li>
+                  <li><a class="red active" data-slide-index="3" href="#">Consume</a></li>
+                </ul>
+              </div>
+              <!-- // -->
+            </div>
+          </div>
+        </section>
+        <!-- // -->
+        <!-- advantages boxes -->
+        <section class="page-section page-section--network page-section--triangle-black text" data-background-lazy-load>
+          <div class="layout">
+            <section class="col-33 left">
+              <div>
+                <h4 class="headline-2">
+                  Only pay for what<br />
+                  you use
+                </h4>
+                <p class="medium-text">
+                  Scale up or down to manage traffic peaks or changing business needs
+                </p>
+              </div>
+            </section>
+            <section class="col-33 left">
+              <div>
+                <h4 class="headline-2">
+                  World leading<br />
+                  security
+                </h4>
+                <p class="medium-text">
+                  Communications Intelligence Platform is PCI DSS Level 1 compliant
+                </p>
+                <p>
+                  <a title="Find out more" class="btn btn--bg-darkblue btn--border-blue" href="/">Find out more</a>
+                </p>
+              </div>
+            </section>
+            <section class="col-33 left">
+              <div>
+                <h4 class="headline-2">
+                  Truly global<br />
+                  coverage
+                </h4>
+                <p class="medium-text">
+                  With resilient and compliant local delivery across 22 territories worldwide
+                </p>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- // -->
+        <!-- text sextion -->
+        <section class="page-section page-section--home-light-bg" data-background-lazy-load>
+          <div class="layout3">
+            <div class="text">
+              <h4 class="headline-6">Bold. Secure. The best.</h4>
+              <p>The best solution on the market.</p>
+            </div>
+            <div class="info-box">
+              <div class="info-box__light text col-35 left">
+                <div>
+                  <p>
+                    In 2013, Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in,
+                    purus. Integer ultrices posuere cubilia Curae, Nulla ipsum dolor lacus, suscipit adipiscing.
+                  </p>
+                  <p><a class="btn btn--bg-white btn--border-blue" href="/">Our Accreditations</a></p>
+                </div>
+              </div>
+              <div class="info-box__blue col-60 right">
+                <div>
+                  <div class="left col-65 text text--bg-blue">
+                    <ul>
+                      <li>
+                        Greater flexibility and lower cost than on-premise solutions
+                      </li>
+                      <li>
+                        Rich, real-time and legacy data capture and analysis across media channels
+                      </li>
+                      <li>
+                        Removes enterprise risk and boosts customer service
+                      </li>
+                      <li>
+                        Supports local to global business and regulatory needs through a single platform
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="info-box__product-tour col-35 left">
+                    <img src="/assets/images/homework/slider-store.png" decoding="async" loading="lazy" alt="" />
+                    <a class="btn btn--bg-darkblue btn--border-blue popup" href="https://www.youtube.com/watch?v=KCK0PqiJbA0">Product Tour</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- // -->
+        <!-- customers -->
+        <section class="page-section page-section--customers" data-background-lazy-load>
+          <div class="layout">
+            <div class="text text--bg-blue">
+              <h3 class="headline-3">
+                Hundreds of customers.<br />
+                One Platform.
+              </h3>
+            </div>
+            <ul class="page-section--customers__logos">
+              <li><img src="/assets/images/homework/i/logos/gallery/viking-135-1246.webp" decoding="async" loading="lazy" alt="" /></li>
+              <li><img src="/assets/images/homework/i/logos/gallery/vodafone-135-1a70.webp" decoding="async" loading="lazy" alt="" /></li>
+              <li><img src="/assets/images/homework/i/logos/gallery/sse-135-4e83.webp" decoding="async" loading="lazy" alt="" /></li>
+              <li><img src="/assets/images/homework/i/logos/gallery/investec-135-6def.webp" decoding="async" loading="lazy" alt="" /></li>
+              <li><img src="/assets/images/homework/i/logos/gallery/cowen-group-135-ef66.webp" decoding="async" loading="lazy" alt="" /></li>
+              <li><img src="/assets/images/homework/i/logos/gallery/gatehouse-bank-135-d82b.webp" decoding="async" loading="lazy" alt="" /></li>
+              <li><img src="/assets/images/homework/i/logos/gallery/bgc-135-bb6b.webp" decoding="async" loading="lazy" alt="" /></li>
+              <li><img src="/assets/images/homework/i/logos/gallery/centrica-135-1f68.webp" decoding="async" loading="lazy" alt="" /></li>
+              <li><img src="/assets/images/homework/i/logos/gallery/itg-1352-5e17.webp" decoding="async" loading="lazy" alt="" /></li>
+              <li><img src="/assets/images/homework/i/logos/gallery/bmo-135-78f7.webp" decoding="async" loading="lazy" alt="" /></li>
+            </ul>
+            <div class="text text--bg-blue page-section--customers__learn">
+              <p><strong>Learn how can help your business.</strong> <a title="Find out more" class="btn btn--bg-darkblue btn--border-blue" href="/">Find out more</a></p>
+            </div>
+          </div>
+        </section>
+        <!-- // -->
+      </div>
+    </main>
     <!-- social media sidebar -->
     <aside class="l-social-media" data-background-lazy-load>
       <div class="layout">
@@ -693,7 +694,6 @@
         </div>
       </div>
     </aside>
-    <!-- // -->
     <!-- footer -->
     <footer class="l-footer">
       <div class="l-footer__top">
@@ -815,8 +815,6 @@
         </div>
       </div>
     </footer>
-    <!-- // -->
-
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGDSWZ8" height="0" width="0" style="display: none; visibility: hidden;"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->

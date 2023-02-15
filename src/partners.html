@@ -42,143 +42,143 @@
   </head>
   <body>
     <div class="overlay"></div>
-    <div class="search">
-      <div class="layout3 text text--bg-grey">
-        <a class="btn-close search__btn-close" href="javascript:;">Close</a>
-        <p>Search and hit enter</p>
-        <form action="/search" method="get">
-          <input type="text" name="phrase" id="phrase" placeholder="What are you looking for?" />
-          <button class="search__submit" type="submit" title="Submit">Search</button>
-        </form>
-      </div>
-    </div>
-
-    <nav class="l-navbar">
-      <a class="logo" href="/">
-        <img src="/assets/images/homework/logo.svg" width="120" height="58" alt="Web Dev Insider" title="Web Dev Insider" />
-      </a>
-
-      <ul class="navbar-menu">
-        <li class="navbar-menu__dropdown"><a id="item-1" href="#">Platform</a></li>
-        <li class="navbar-menu__dropdown"><a id="item-2" href="#">Solutions</a></li>
-        <li class="navbar-menu__dropdown"><a id="item-3" href="#">Services</a></li>
-        <li><a title="Log in" href="/">Log in</a></li>
-        <li><a title="Contact" href="/">Contact</a></li>
-        <li>
-          <a class="navbar-menu__search js-open-searchbar" href="#" title="What are you looking for?"><span>Search</span></a>
-        </li>
-      </ul>
-      <a title="Menu" class="l-navbar__burger" href="javascript:;">Menu</a>
-    </nav>
-    <div class="l-megamenu">
-      <div class="layout">
-        <a class="btn-close js-close-megamenu" href="">Close</a>
-        <div class="l-megamenu__layer" id="megamenu-item-1">
-          <div class="col-65 l-megamenu__links left">
-            <ul>
-              <li><a href="/">Platform Overview</a></li>
-              <li><a href="/">Management Center</a></li>
-              <li>
-                <a title="Modules" href="/">Modules</a>
-                <ul>
-                  <li><a href="/">Capture</a></li>
-                  <li><a href="/">Storage</a></li>
-                  <li><a href="/">Interaction Analytics</a></li>
-                </ul>
-              </li>
-              <li><a title="Cloud" href="/">Cloud</a></li>
-            </ul>
-          </div>
-          <div class="col-35 text right">
-            <div>
-              <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="">White papers</a></div>
-              <h2 class="headline-2">Some super interesting resource to download</h2>
-              <p class="small-text">
-                <img
-                  src="/assets/images/homework/posts/post.thumbnail.2x.webp"
-                  srcset="/assets/images/homework/posts/post.thumbnail.1x.webp 1x, /assets/images/homework/posts/post.thumbnail.2x.webp 2x"
-                  class="l-megamenu__image"
-                  decoding="async"
-                  loading="lazy"
-                  alt=""
-                  style="aspect-ratio: 20 / 17"
-                />
-                Just download it and enjoy.
-              </p>
-              <p>
-                <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now: Ovum Report - Vodafone in-network call recording">Download now</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="l-megamenu__layer" id="megamenu-item-2">
-          <div class="col-65 l-megamenu__links left">
-            <ul>
-              <li><a href="/">Solution Overview</a></li>
-              <li>
-                <a title="Call recording" href="/">Call recording</a>
-                <ul>
-                  <li><a title="Mobile recording" href="/">Mobile recording</a></li>
-                  <li><a title="Fixed-Line recording" href="/">Fixed-Line recording</a></li>
-                  <li><a title="Multi-channel recording" href="/">Multi-channel recording</a></li>
-                </ul>
-              </li>
-              <li><a title="Interaction Analytics" href="/">Interaction Analytics</a></li>
-              <li>
-                <a title="PCI Compliance" href="/">PCI Compliance</a>
-                <ul>
-                  <li><a title="Live - DTMF" href="/">Live - DTMF</a></li>
-                  <li><a title="Automate" href="/">Automate</a></li>
-                  <li><a title="Archive" href="/">Archive</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-35 text right">
-            <div>
-              <div class="item__category item__category--79 l-megamenu__cat"><a title="eBooks" href="/">eBooks</a></div>
-              <h2 class="headline-2">PCI DSS and the contact center</h2>
-              <p class="small-text">Some text is here so you are impressed and you will click the button below.</p>
-              <p>
-                <a class="btn btn--bg-darkblue btn--border-blue" href="/2" title="Download now">Download now</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="l-megamenu__layer" id="megamenu-item-3">
-          <div class="col-65 l-megamenu__links left">
-            <ul>
-              <li><a title="Support" href="/">Support</a></li>
-              <li><a title="Training" href="/">Training</a></li>
-              <li><a title="Consulting" href="/">Consulting</a></li>
-            </ul>
-          </div>
-          <div class="col-35 text right">
-            <div>
-              <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="/">White papers</a></div>
-              <h2 class="headline-2">Report about mobile payment gateways</h2>
-              <p class="small-text">
-                <img
-                  src="/assets/images/homework/posts/post2.thumbnail.2x.webp"
-                  srcset="/assets/images/homework/posts/post2.thumbnail.1x.webp 1x, /assets/images/homework/posts/post2.thumbnail.2x.webp 2x"
-                  class="l-megamenu__image"
-                  decoding="async"
-                  loading="lazy"
-                  alt=""
-                  style="aspect-ratio: 16 / 10"
-                />
-                An MNO service that doesn&#39;t require a SIM change
-              </p>
-              <p>
-                <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now">Download now</a>
-              </p>
-            </div>
-          </div>
+    <header>    
+      <div class="search">
+        <div class="layout3 text text--bg-grey">
+          <a class="btn-close search__btn-close" href="javascript:;">Close</a>
+          <p>Search and hit enter</p>
+          <form action="/search" method="get">
+            <input type="text" name="phrase" id="phrase" placeholder="What are you looking for?" />
+            <button class="search__submit" type="submit" title="Submit">Search</button>
+          </form>
         </div>
       </div>
-    </div>
+      <nav class="l-navbar">
+        <a class="logo" href="/">
+          <img src="/assets/images/homework/logo.svg" width="120" height="58" alt="Web Dev Insider" title="Web Dev Insider" />
+        </a>
 
-    <div class="inner-page">
+        <ul class="navbar-menu">
+          <li class="navbar-menu__dropdown"><a id="item-1" href="#">Platform</a></li>
+          <li class="navbar-menu__dropdown"><a id="item-2" href="#">Solutions</a></li>
+          <li class="navbar-menu__dropdown"><a id="item-3" href="#">Services</a></li>
+          <li><a title="Log in" href="/">Log in</a></li>
+          <li><a title="Contact" href="/">Contact</a></li>
+          <li>
+            <a class="navbar-menu__search js-open-searchbar" href="#" title="What are you looking for?"><span>Search</span></a>
+          </li>
+        </ul>
+        <a title="Menu" class="l-navbar__burger" href="javascript:;">Menu</a>
+      </nav>
+      <div class="l-megamenu">
+        <div class="layout">
+          <a class="btn-close js-close-megamenu" href="">Close</a>
+          <div class="l-megamenu__layer" id="megamenu-item-1">
+            <div class="col-65 l-megamenu__links left">
+              <ul>
+                <li><a href="/">Platform Overview</a></li>
+                <li><a href="/">Management Center</a></li>
+                <li>
+                  <a title="Modules" href="/">Modules</a>
+                  <ul>
+                    <li><a href="/">Capture</a></li>
+                    <li><a href="/">Storage</a></li>
+                    <li><a href="/">Interaction Analytics</a></li>
+                  </ul>
+                </li>
+                <li><a title="Cloud" href="/">Cloud</a></li>
+              </ul>
+            </div>
+            <div class="col-35 text right">
+              <div>
+                <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="">White papers</a></div>
+                <h2 class="headline-2">Some super interesting resource to download</h2>
+                <p class="small-text">
+                  <img
+                    src="/assets/images/homework/posts/post.thumbnail.2x.webp"
+                    srcset="/assets/images/homework/posts/post.thumbnail.1x.webp 1x, /assets/images/homework/posts/post.thumbnail.2x.webp 2x"
+                    class="l-megamenu__image"
+                    decoding="async"
+                    loading="lazy"
+                    alt=""
+                    style="aspect-ratio: 20 / 17"
+                  />
+                  Just download it and enjoy.
+                </p>
+                <p>
+                  <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now: Ovum Report - Vodafone in-network call recording">Download now</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="l-megamenu__layer" id="megamenu-item-2">
+            <div class="col-65 l-megamenu__links left">
+              <ul>
+                <li><a href="/">Solution Overview</a></li>
+                <li>
+                  <a title="Call recording" href="/">Call recording</a>
+                  <ul>
+                    <li><a title="Mobile recording" href="/">Mobile recording</a></li>
+                    <li><a title="Fixed-Line recording" href="/">Fixed-Line recording</a></li>
+                    <li><a title="Multi-channel recording" href="/">Multi-channel recording</a></li>
+                  </ul>
+                </li>
+                <li><a title="Interaction Analytics" href="/">Interaction Analytics</a></li>
+                <li>
+                  <a title="PCI Compliance" href="/">PCI Compliance</a>
+                  <ul>
+                    <li><a title="Live - DTMF" href="/">Live - DTMF</a></li>
+                    <li><a title="Automate" href="/">Automate</a></li>
+                    <li><a title="Archive" href="/">Archive</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="col-35 text right">
+              <div>
+                <div class="item__category item__category--79 l-megamenu__cat"><a title="eBooks" href="/">eBooks</a></div>
+                <h2 class="headline-2">PCI DSS and the contact center</h2>
+                <p class="small-text">Some text is here so you are impressed and you will click the button below.</p>
+                <p>
+                  <a class="btn btn--bg-darkblue btn--border-blue" href="/2" title="Download now">Download now</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="l-megamenu__layer" id="megamenu-item-3">
+            <div class="col-65 l-megamenu__links left">
+              <ul>
+                <li><a title="Support" href="/">Support</a></li>
+                <li><a title="Training" href="/">Training</a></li>
+                <li><a title="Consulting" href="/">Consulting</a></li>
+              </ul>
+            </div>
+            <div class="col-35 text right">
+              <div>
+                <div class="item__category item__category--50 l-megamenu__cat"><a title="White papers" href="/">White papers</a></div>
+                <h2 class="headline-2">Report about mobile payment gateways</h2>
+                <p class="small-text">
+                  <img
+                    src="/assets/images/homework/posts/post2.thumbnail.2x.webp"
+                    srcset="/assets/images/homework/posts/post2.thumbnail.1x.webp 1x, /assets/images/homework/posts/post2.thumbnail.2x.webp 2x"
+                    class="l-megamenu__image"
+                    decoding="async"
+                    loading="lazy"
+                    alt=""
+                    style="aspect-ratio: 16 / 10"
+                  />
+                  An MNO service that doesn&#39;t require a SIM change
+                </p>
+                <p>
+                  <a class="btn btn--bg-darkblue btn--border-blue" href="/" title="Download now">Download now</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="inner-page">
       <header class="inner-page__header inner-page__header--with-video" role="banner">
         <video
           autoplay
@@ -192,14 +192,14 @@
         </video>
 
         <div class="layout2 text text--bg-blue">
-          <h2 class="headline-8">Become our partner</h2>
           <h1 class="headline-1">Partnership</h1>
+          <h2 class="headline-8">Become our partner</h2>
           <p>Be part of a community that aims to change the world.</p>
         </div>
       </header>
 
-      <div class="l-main l-main--inner-page" role="main">
-        <div class="page-section">
+      <div class="l-main l-main--inner-page">
+        <section class="page-section">
           <div class="layout text">
             <div class="col-50 left">
               <div>
@@ -230,9 +230,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div id="solution-partners" class="page-section page-section--bg-white">
+        <section id="solution-partners" class="page-section page-section--bg-white">
           <div class="layout text">
             <div class="col-40 left">
               <div>
@@ -257,9 +257,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="page-section">
+        <section class="page-section">
           <div class="layout text">
             <div class="col-50 left">
               <div>
@@ -282,9 +282,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="page-section page-section--bg-dark" data-background-lazy-load>
+        <section class="page-section page-section--bg-dark" data-background-lazy-load>
           <div class="layout text">
             <div class="col-100 left">
               <div>
@@ -297,11 +297,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
     <!-- footer -->
-
     <footer class="l-footer">
       <div class="l-footer__top">
         <div class="layout">
@@ -422,7 +421,6 @@
         </div>
       </div>
     </footer>
-
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGDSWZ8" height="0" width="0" style="display: none; visibility: hidden;"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
