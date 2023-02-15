@@ -46,7 +46,7 @@
 	}
 
 	&--bg-black {
-		@include buttonBackgroundColor($darkgrey3, $darkgrey3);
+		@include buttonBackgroundColor($darkgrey3, $navyblue);
 		color: $white;
 	}
 
