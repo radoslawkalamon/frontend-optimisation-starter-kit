@@ -14,15 +14,15 @@
 	transition: box-shadow 0.2s ease-out, background-position 0.2s ease-out;
 
 	&:hover {
-		color: inherit;
+		color: $lightblue;
 		background-position: -200px;
 	}
 
-	&.btn--big {
+	&--big {
 		font-size: 25px;
 	}
 
-	&.btn--bg-transparent {
+	&--bg-transparent {
 		box-shadow: none;
 		color: $white;
 
@@ -31,82 +31,74 @@
 		}
 	}
 
-	&.btn--bg-darkblue {
-		box-shadow: $button-border-size 1000px 1px $navyblue inset;
+	&--bg-darkblue {
+		@include buttonBackgroundColor($navyblue, $navybluelight);
 		color: $white;
-
-		&:hover {
-			box-shadow: $button-border-size 1000px 1px #035d94 inset;
-		}
 	}
 
-	&.btn--bg-white {
-		box-shadow: $button-border-size 1000px 1px $white inset;
+	&--bg-white {
+		@include buttonBackgroundColor($white, $lightblue);
 		color: $blue1;
 
 		&:hover {
-			box-shadow: $button-border-size 1000px 1px $lightblue inset;
+			color: $blue1;
 		}
 	}
 
-	&.btn--bg-black {
-		box-shadow: $button-border-size 1000px 1px $darkgrey3 inset;
+	&--bg-black {
+		@include buttonBackgroundColor($darkgrey3, $darkgrey3);
 		color: $white;
-
-		&:hover {
-			box-shadow: $button-border-size 1000px 1px #333 inset;
-		}
 	}
 
-	&.btn--border-blue {
+	&--border-blue {
 		background-image: url('/assets/images/homework/btn-grad-blue.svg');
 	}
 
-	&.btn--border-red {
+	&--border-red {
 		background-image: url('/assets/images/homework/btn-grad-red.svg');
 	}
 
-	&.btn--border-orange {
+	&--border-orange {
 		background-image: url('/assets/images/homework/btn-grad-orange.svg');
 	}
 
-	&.btn--border-green {
+	&--border-green {
 		background-image: url('/assets/images/homework/btn-grad-green.svg');
 	}
+}
 
-	&.btn--arrow-down {
-		align-items: center;
-		aspect-ratio: 1 / 1;
-		border-radius: 50%;
-		display: flex;
-		justify-content: center;
-		padding: 0;
-		width: 32px;
-	
-		&::before {
-			transform: translateY(-1px);
-			content: url(/assets/images/homework/btn-arrow-down.svg);
-		}
+.btn--arrow-down {
+	align-items: center;
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	width: 32px;
+
+	&::before {
+		transform: translateY(-1px);
+		content: url(/assets/images/homework/btn-arrow-down.svg);
 	}
-	
-	&.btn--play {
-		align-items: center;
-		aspect-ratio: 1 / 1;
-		border-radius: 50%;
-		display: flex;
-		justify-content: center;
-		padding: 0;
-		width: 80px;
-	
-		&::before {
-			border-bottom: 1em solid transparent;
-			border-left: 1.625em solid $blue1;
-			border-top: 1em solid transparent;
-			content: '';
-			height: 0;
-			width: 0;
-			transform: translateX(0.125em);
-		}
+}
+
+.btn--play {
+	align-items: center;
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	width: 80px;
+
+	&::before {
+		border-bottom: 1em solid transparent;
+		border-left: 1.625em solid $blue1;
+		border-top: 1em solid transparent;
+		content: '';
+		height: 0;
+		width: 0;
+		transform: translateX(0.125em);
 	}
 }
 

@@ -24,7 +24,7 @@
 	}
 
 	&.news-list--home {
-		@include flexbox();
+		display: flex;
 		justify-content: space-between;
 
 		& > article {

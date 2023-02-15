@@ -1,6 +1,6 @@
 .info-box {
-	@include flexbox();
 	clear: both;
+	display: flex;
 	margin-top: 30px;
 	justify-content: space-between;
 
@@ -27,7 +27,7 @@
 
 .info-box__blue {
 	& > div {
-		@include flexbox();
+		display: flex;
 		padding: 0 !important;
 		height: 100%;
 

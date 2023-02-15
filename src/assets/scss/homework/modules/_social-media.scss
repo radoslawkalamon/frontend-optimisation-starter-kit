@@ -8,7 +8,7 @@
 
 	a,
 	span {
-		@include border-radius(50%);
+		border-radius: 50%;
 	}
 }
 
@@ -43,11 +43,7 @@
 .social-media--white {
 	@each $ico in facebook, linkedin, twitter, gplus, share {
 		.social-media__#{$ico} {
-			box-shadow: $button-border-size 1000px 1px $white inset;
-
-			&:hover {
-				box-shadow: $button-border-size 1000px 1px $lightblue inset;
-			}
+			@include buttonBackgroundColor($white, $lightblue);
 
 			&::before {
 				background-image: url(/assets/images/homework/btn-#{$ico}.svg);
@@ -59,11 +55,7 @@
 .social-media--blue {
 	@each $ico in facebook, linkedin, twitter, gplus {
 		.social-media__#{$ico} {
-			box-shadow: $button-border-size 1000px 1px $navyblue inset;
-
-			&:hover {
-				box-shadow: $button-border-size 1000px 1px $lightblue inset;
-			}
+			@include buttonBackgroundColor($navyblue, $lightblue);
 
 			&::before {
 				background-image: url(/assets/images/homework/btn-#{$ico}-white.svg);
@@ -118,7 +110,7 @@
 			padding: 5px;
 
 			width: 207px;
-			@include border-radius(20px);
+			border-radius: 20px;
 			@include transition(all, 0.2s, ease-in);
 
 			li {
