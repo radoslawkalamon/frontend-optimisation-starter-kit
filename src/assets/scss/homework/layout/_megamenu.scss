@@ -10,7 +10,7 @@
 	color: #fff;
 
 	p, li {
-		color: #ededed;
+		color: $lightblue;
 	}
 
 	.btn-close {
@@ -42,7 +42,7 @@
 
 
 			> a {
-				color: #d1d1d1;
+				color: $lightblue;
 			}
 		}
 
@@ -50,7 +50,7 @@
 			margin: 10px;
 
 			a {
-				color: #666;
+				color: $lightblue3;
 			}
 		}
 	}
@@ -58,7 +58,7 @@
 
 
 .l-megamenu__cat a {
-	color: #777;
+	color: $lightblue3;
 
 	&:hover {
 		color: #fff;

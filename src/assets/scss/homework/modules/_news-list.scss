@@ -60,11 +60,11 @@
 
 		& > div {
 			padding: 40px 40px 30px 40px;
-			background: #fff;
+			background: $white;
 		}
 
 		figure {
-			border: 1px solid #ededed;
+			border: 1px solid $lightblue;
 		}
 
 		.text:not(.subscription) {

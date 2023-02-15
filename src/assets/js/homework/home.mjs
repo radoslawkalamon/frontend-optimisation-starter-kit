@@ -131,7 +131,7 @@ const home = {
   banner_anim: function () {
     /* init anim items and set initial properties */
     TweenMax.set('#platform', { top: '-10%' });
-    TweenMax.set('#platform, #card-base, #card-chip, #email', { top: '-10%' });
+    TweenMax.set('#platform, #card-base, #card-chip, #email-icon', { top: '-10%' });
 
     TweenMax.set('#chart-base', { top: '5%' });
     TweenMax.set('#chart-1', { scaleY: 0.1, top: '50.2%' });
@@ -152,7 +152,7 @@ const home = {
     TweenLite.to('#card-base', 1.1, { top: '-2%', ease: Back.easeOut, delay: 0.5 });
     TweenLite.to('#card-chip', 1.2, { top: '-3%', delay: 0.5 });
 
-    TweenLite.to('#email', 1.2, { top: '-2%', ease: Back.easeOut, delay: 0.5 });
+    TweenLite.to('#email-icon', 1.2, { top: '-2%', ease: Back.easeOut, delay: 0.5 });
 
     TweenLite.to('#pc', 1.2, { top: '-1%', ease: Back.easeOut, delay: 0.5 });
 

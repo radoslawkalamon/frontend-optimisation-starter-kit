@@ -31,12 +31,9 @@
 
 	.page-section--services {
 		position: relative;
-		zoom: 1;
 		overflow: hidden;
 		padding: 4em 0;
-
-		color: $grey;
-
+		color: $darkgrey;
 
 		figure {
 			margin-bottom: 20px;
@@ -156,10 +153,8 @@
 			url(/assets/images/homework/bg-sec-grad-blue.svg) center center no-repeat;
 		background-size: auto auto, cover;
 
-		//background-attachment: fixed;
-
 		.headline-2 {
-			color: $lightblue2;
+			color: $white;
 		}
 
 		p {

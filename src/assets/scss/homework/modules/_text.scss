@@ -92,11 +92,11 @@
 }
 
 .text--bg-grey {
-  color: #fff;
+  color: $white;
 
   p,
   li {
-    color: #ededed;
+    color: $white;
   }
 
   ul li:before {

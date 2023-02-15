@@ -53,7 +53,7 @@
 	.headline-1 {
 		color: $white;
 		font-size: 3em;
-		text-shadow: 0px 1px 0.2px rgba(0, 0, 0, .2);
+		text-shadow: 0px 1px 0.2px $black;
 	
 		@media screen and (min-width: map.get($breakpoints, "XGA")) {
 			font-size: 4em;
@@ -63,7 +63,7 @@
 	p {
 		color: $lightblue;
 		font-size: 1.2em !important;
-		text-shadow: 0px 1px 0.4px rgba(0, 0, 0, .4);
+		text-shadow: 0px 1px 0.4px $black;
 	}
 }
 

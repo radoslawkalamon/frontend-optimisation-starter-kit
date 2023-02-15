@@ -20,16 +20,16 @@ body {
 }
 
 a {
-	color: $blue1;
+	color: $navyblue;
   text-decoration: none;
 
   &:hover {
-    color: $navyblue;
+    color: $blue1;
   }
 }
 
 .blue {
-  color: $blue1;
+  color: $navyblue;
 }
 
 .green {
