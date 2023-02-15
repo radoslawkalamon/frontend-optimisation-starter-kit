@@ -95,7 +95,7 @@ const paymentForm = {
       });
     });
   }
-}
+};
 
 (() => {
   document.querySelector('[data-load-stripe]').addEventListener('click', () => paymentForm.init(), { once: true })
