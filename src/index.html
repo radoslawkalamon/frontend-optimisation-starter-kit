@@ -19,9 +19,18 @@
     <link href="/favicon.ico" rel="icon" />
     <link href="/assets/css/homework/app.css" rel="stylesheet" fetchpriority="high" />
 
+    <meta property="og:title" content="Web Dev Insider - Site to Optimise">
+    <meta property="og:site_name" content="Web Dev Insider - Site to Optimise">
+    <meta property="og:url" content="https://frontend-optimisation-starter-kit-radoslawkalamon.vercel.app">
+    <meta property="og:description" content="Web Dev Insider demo page for learning purposes">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://frontend-optimisation-starter-kit-radoslawkalamon.vercel.app/assets/images/homework/cover-open-graph.png">
+
     <script type="module" src="/assets/js/homework/home.mjs" fetchpriority="low" defer></script>
     <script type="module" src="/assets/js/homework/global.mjs" fetchpriority="low" defer></script>
     <script src="https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default" charset="UTF-8" crossorigin="*" fetchpriority="low" defer></script>
+
+    <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Webpage","specialty":"Webpage optimization, FrontEnd","mainContentOfPage":{"@context":"http://schema.org/","@type":"WebPageElement","cssSelector":"main"},"primaryImageOfPage":"https://frontend-optimisation-starter-kit-radoslawkalamon.vercel.app/assets/images/homework/cover-open-graph.png"},{"@context":"http://schema.org","@type":"WebSite","@id":"https://frontend-optimisation-starter-kit-radoslawkalamon.vercel.app/#website","url":"https://frontend-optimisation-starter-kit-radoslawkalamon.vercel.app","name":"Web Dev Insider","headline":"Web Dev Insider - Site to Optimise - Homepage","image":"https://frontend-optimisation-starter-kit-radoslawkalamon.vercel.app/assets/images/homework/cover-open-graph.png","inLanguage":"en-US","author":"Radosław Kalamon","description":"Web Dev Insider demo page for learning purposes.","disambiguatingDescription":"Web Dev Insider demo page","potentialAction":{"@type":"SearchAction","target":"https://frontend-optimisation-starter-kit-radoslawkalamon.vercel.app/search?phrase={search_term}","query-input":"required name=search_term"},"keywords":["Webpage optimization","FrontEnd","Webdevelopment","Web","Technology","Tech","Blog"],"hasPart":[{"@context":"http://schema.org/","@type":"WPHeader","@id":"#header","headline":"Seamless payment option","cssSelector":"header"},{"@context":"http://schema.org/","@type":"WPFooter","cssSelector":"footer","@id":"#footer","copyrightHolder":"Web Dev Insider","publisher":"Web Dev Insider","copyrightYear":"20XX"}]}]</script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -204,7 +213,7 @@
             <p><a class="btn btn--bg-darkblue btn--border-blue popup" href="https://www.youtube.com/watch?v=4ypqTZcM-9M">Watch video</a><a class="btn btn--bg-transparent" href="">or Contact us</a></p>
           </div>
 
-          <div class="home-banner__anim">
+          <div class="home-banner__anim" aria-hidden="true">
             <img id="resizer" src="/assets/images/homework/anim/empty-block.png" alt="Empty block" />
             <img id="shadow" src="/assets/images/homework/anim/shadow.png" alt="Shadow" />
             <img id="rainbow" src="/assets/images/homework/anim/rainbow.png" alt="Rainbow" />
