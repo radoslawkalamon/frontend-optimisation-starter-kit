@@ -6,7 +6,6 @@
 
 /* Base */
 @import "base/_normalize";
-@import "base/_fonts";
 @import "base/_base";
 
 /* Layout */
@@ -44,27 +43,25 @@
 }
 
 .overlay {
-	display: none;
-	position: fixed;
-	z-index: 3000;
-	top: 0;
-	left: 0;
-	right:0;
-	bottom: 0;
-
-	width: 100%;
-	height: 100%;
-
 	background: rgba($black, .8);
+	bottom: 0;
+	display: none;
+	left: 0;
+	height: 100%;
+	right:0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 3000;
 }
 
 .popup-form-container {
-	padding-top: 0;
+	background-color: #fff;
 	max-width: 600px;
 	width: 90%;
 	margin: 0 auto;
-	background-color: #fff;
 	padding: 3em;
+	padding-top: 0;
 	position: relative;
 }
 

@@ -1,13 +1,9 @@
 .l-main {
-	
+	&--inner-page {
+        background: #f7f7f7 url(/assets/images/homework/bg-sec-grey-grid.webp) center 100px no-repeat;
+        color: #4c5359;
+    }
 }
-
-.l-main--inner-page {
-	background: #f7f7f7 url(/assets/images/homework/bg-sec-grey-grid.webp) center 100px no-repeat;
-
-	color: #4c5359;
-}
-
 
 .l-main .col-30:first-child > div,
 .l-main .col-33:first-child > div,
@@ -34,6 +30,6 @@
 .l-main .col-60:last-child > div,
 .l-main .col-70:last-child > div,
 .l-main .col-50:last-child > div,
-.l-main .col-45:last-child > div, {
+.l-main .col-45:last-child > div {
     padding-left: 20px;
 }
