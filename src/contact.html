@@ -234,22 +234,22 @@
 
               <form data-hook="contact" class="form" action="/contact" method="post">
                 <div class="form__row">
-                  <label>
-                    Name
+                  <label for="name">
+                    Name <span class="label-additional-text">[required]</span>
                   </label>
-                  <input id="name" name="name" type="text" placeholder="Jenny Rosen" required />
+                  <input id="name" name="name" type="text" required />
                 </div>
 
                 <div class="form__row">
-                  <label>
-                    Email Address
+                  <label for="email">
+                    Email Address <span class="label-additional-text">[required]</span>
                   </label>
-                  <input id="email" name="email" type="email" placeholder="jenny.rosen@example.com" required />
+                  <input id="email" name="email" type="email" required />
                 </div>
 
                 <div class="form__row">
-                  <label>
-                    Message
+                  <label for="message">
+                    Message <span class="label-additional-text">[required]</span>
                   </label>
                   <textarea id="message" name="message"></textarea>
                 </div>

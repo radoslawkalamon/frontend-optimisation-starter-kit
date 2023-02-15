@@ -110,16 +110,11 @@ const paymentForm = {
         }
       };
 
-      var errorMessage = document.getElementById('error-message');
-
       // Call `stripe.createSource` with the iban Element and additional options.
       stripe.createSource(iban, sourceData).then(function (result) {
         if (result.error) {
-          // Inform the customer that there was an error.
-          errorMessage.textContent = result.error.message;
+          alert(result.error.message)
         } else {
-          // Send the Source to your server to create a charge.
-          errorMessage.textContent = ''
           stripeSourceHandler(result.source);
         }
       });
