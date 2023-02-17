@@ -100,12 +100,13 @@
 }
 
 .home-banner__anim {
-	position: absolute;
-	width: 100%;
 	left: 0;
-	right: 0;
-	top: 32px;
+	position: absolute;
 	opacity: 0;
+	right: 0;
+	transition: opacity 0.5s ease;
+	top: 32px;
+	width: 100%;
 	z-index: 1;
 
 	@media screen and (min-width: map.get($breakpoints, "WVGA")) {
@@ -117,35 +118,94 @@
 	}
 
 	img {
+		height: auto;
+	  left: 0;
 	  position: absolute;
 	  top: 0; 
-	  left: 0;
     width: 100%;
-	  height: auto;
+		transition: transform 1.25s cubic-bezier(0.175, 0.885, 0.32, 1.125);
 	}
 
 	#resizer {
-	  position: relative;
+		position: relative;
+	}
+
+	#cloud {
+		transform: translate(5%, 2%);
+	}
+
+	#social,
+	#pc {
+		transform: translate(-2.5%, -1%);
+	}
+
+	#rainbow {
+		transform: translate(-5%, 0);
+	}
+
+	#card-base,
+	#card-chip,
+	#email-icon,
+	#mobile {
+		transform: translate(0, -5%);
+	}
+
+	#card-chip {
+		transition-timing-function: ease-out;
+	}
+
+	#chart-1,
+	#chart-2,
+	#chart-3 {
+		transition: transform 0.75s ease;
+		transform: translate(0, 3%) scaleY(0.1);
+		transform-origin: bottom center;
+		width: 2.421%;
+    height: auto;
 	}
 
 	#chart-1 {
-    left: 52.7%;
-    top: 34.2%;
-    width: 2.421%;
-    height: auto;    
+    left: 52.9%;
+    top: 34%;
 	}
 
 	#chart-2 {
-    left: 56.3%;
-    top: 41.7%;
-    width: 2.421%;
-    height: auto;    
+		left: 56.5%;
+    top: 41.6%; 
 	}
 
 	#chart-3 {
-    left: 59.0%;
-    top: 55.7%;
-    width: 2.421%;
-    height: auto;    
+    left: 59.3%;
+    top: 55.2%; 
+	}
+}
+
+.home-banner__anim--visible {
+	opacity: 1;
+
+	#cloud,
+	#social,
+	#mobile,
+	#rainbow {
+		transform: translate(0);
+	}
+
+	#pc {
+		transform: translate(0, -1%);
+	}
+
+	#card-base,
+	#email-icon {
+		transform: translate(0, -2%);
+	}
+
+	#card-chip {
+		transform: translate(0, -3%);
+	}
+
+	#chart-1,
+	#chart-2,
+	#chart-3 {
+		transform: translate(0) scaleY(1)
 	}
 }
