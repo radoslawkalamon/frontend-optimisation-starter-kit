@@ -54,7 +54,6 @@
 .page-section--global-map {
   color: #fff;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, .5);
-  padding-bottom: 2em;
   text-align: center;
 
   background:
@@ -64,9 +63,10 @@
   background-attachment: fixed, scroll;
 
   .headline-3 {
+    padding-bottom: 0;
+
     @media screen and (max-width: map.get($breakpoints, "WVGA")) {
-      font-size: 3em;
-      padding-bottom: 0;
+      font-size: 3em;      
     }
   }
 }
@@ -88,7 +88,6 @@
 }
 
 .page-section--network {
-  padding-top: 120px;
   text-align: center;
   color: #fff;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, .5);
@@ -101,7 +100,6 @@
   @media screen and (max-width: map.get($breakpoints, "WVGA")) {
     position: relative;
     padding-top: 50px;
-    padding-bottom: 120px;
   }
 
   .btn {
@@ -144,7 +142,6 @@
 
 .page-section--customers {
   background-image: url('/assets/images/homework/bg-sec-customers.webp');
-  padding-bottom: 2em;
 
   background-color: #0c8abd;
   background-position: top center;

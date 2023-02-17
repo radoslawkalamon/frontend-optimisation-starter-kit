@@ -1,7 +1,6 @@
 import './vendor/jquery.min.js'
 import './vendor/magnific.min.js'
 import './vendor/TweenMax.min.js'
-import './vendor/bxslider.min.js'
 
 const helpers = {
   initIsVisibleObserver: ({ callback, elements, shallUnobserve = true, threshold = 0 }) => {
@@ -65,17 +64,6 @@ const home = {
     TweenLite.to('#rainbow', 1.1, { opacity: 1, delay: 0.5, left: 0 });
   },
 
-  slider_features: function () {
-    $('#slider-features').bxSlider({
-      nextSelector: '.btn-arrow--right',
-      prevSelector: '.btn-arrow--left',
-      nextText: '',
-      prevText: '',
-      pagerCustom: '#slider-features-pager',
-      touchEnabled: false
-    });
-  },
-
   setObserverForInfoBoxAnimation: () => {
     helpers.initIsVisibleObserver({
       callback: ({ element, isVisible }) => isVisible && element.classList.add('info-box__product-tour--visible'),
@@ -119,7 +107,6 @@ const home = {
 
   init: function () {
     this.banner_anim();
-    this.slider_features();
     this.setObserverForInfoBoxAnimation();
     this.setObserverForBackgroundImages();
     this.magnific();

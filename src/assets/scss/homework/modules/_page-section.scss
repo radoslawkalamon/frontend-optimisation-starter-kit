@@ -1,19 +1,17 @@
-.l-main {
-	.page-section {
-		padding: 4em 0;
-		position: relative;
-		clear: both;
-	}
+.page-section {
+	padding: 4em 0;
+	position: relative;
+	clear: both;
+}
 
-	.page-section--bg-dark {
-		background: #131213 url(/assets/images/homework/bg-sec-dark-circles.webp) top center repeat-x;
+.page-section--bg-dark {
+	background: #131213 url(/assets/images/homework/bg-sec-dark-circles.webp) top center repeat-x;
 
-		.text {
-			@extend .text--bg-grey;
-		}
+	.text {
+		@extend .text--bg-grey;
 	}
+}
 
-	.page-section--bg-white {
-		background: #fff;
-	}
+.page-section--bg-white {
+	background: #fff;
 }
