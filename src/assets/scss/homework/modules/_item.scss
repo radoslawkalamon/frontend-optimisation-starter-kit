@@ -13,10 +13,7 @@
 		background: url(/assets/images/homework/ico-time.svg) center left no-repeat;
 		background-size: 17px 17px;
 	}
-
-
 }
-
 
 .item__cat {
 	@include inline-block();
@@ -48,9 +45,6 @@
 	}
 }
 
-
-
-
 .item__back-to-list {
 	display: inline-block;
 	padding: 3px 30px 3px 3px;
@@ -65,10 +59,9 @@
 
 
 .item__category {
+	background: url(/assets/images/homework/ico-news.svg) center left no-repeat;
+	clear: both;
 	display: block;
 	margin-bottom: 5px;
 	padding: 2px 0 2px 25px;
-	clear: both;
-
-	background: url(/assets/images/homework/ico-news.svg) center left no-repeat;
 }

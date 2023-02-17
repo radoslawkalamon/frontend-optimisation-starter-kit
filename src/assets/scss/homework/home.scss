@@ -1,0 +1,27 @@
+@use "sass:map";
+
+/* SASS tools */
+@import "sass-components/_variables";
+@import "sass-components/_mixins";
+
+/* Layout */
+@import "layout/_home";
+@import "layout/_shortcuts";
+@import "layout/_social-media";
+
+/* Modules */
+@import "modules/_btns-arrow";
+@import "modules/_info-box";
+@import "modules/_page-section-home";
+@import "modules/_slider-full-width";
+@import "modules/_magnific";
+
+.popup-form-container {
+	background-color: #fff;
+	max-width: 600px;
+	width: 90%;
+	margin: 0 auto;
+	padding: 3em;
+	padding-top: 0;
+	position: relative;
+}

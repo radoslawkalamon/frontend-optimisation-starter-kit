@@ -26,6 +26,11 @@
 			padding-left: 25px;
 			padding-right: 25px;
 
+			@media screen and (max-width: map.get($breakpoints, "HVGA")) {
+				padding-left: 12px;
+				padding-right: 12px;
+			}
+
 			&.inactive {
 				color: #ccc;
 				cursor: default;
@@ -34,10 +39,18 @@
 
 		&.pagination__prev {
 			margin-right: 20px;
+
+			@media screen and (max-width: map.get($breakpoints, "HVGA")) {
+				margin-right: 5px;
+			}
 		}
 
 		&.pagination__next {
 			margin-left: 20px;
+
+			@media screen and (max-width: map.get($breakpoints, "HVGA")) {
+				margin-right: 0;
+			}
 		}
 
 		&:not(.inactive):hover {

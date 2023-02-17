@@ -60,19 +60,14 @@
     }
 }
 
-.form__bank-name {
+.form__label {
     padding: 9px 0 0;
 
     &:empty {
         display: none;
     }
-}
 
-.form__error-message {
-    padding: 9px 0 0;
-    color: $red;
-
-    &:empty {
-        display: none;
+    &--error {
+        color: $red;
     }
 }

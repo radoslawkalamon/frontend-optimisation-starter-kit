@@ -56,19 +56,25 @@
 	}
 }
 
-
-
-
 /* inner page contaciner - for news, resource -> whole layer under the main content is blue */
 .inner-page--blue-fill {
 	background: #f3f3f3 url(/assets/images/homework/bg-listings-grad.webp) top center no-repeat;
 }
 
-
-
 .inner-page--blue-fill__header {
 	text-align: center;
 	padding: 70px 0 50px 0;
+
+	@media screen and (max-width: map.get($breakpoints, "WVGA")) {
+		padding-top: 20px;
+		padding-bottom: 30px;
+	}
+
+	@media screen and (max-width: map.get($breakpoints, "XGA")) {
+		background: none !important;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 
 	h1 {
 		padding-bottom: 0;
@@ -82,6 +88,10 @@
 .inner-page--blue-fill__header--news  {
 	background: url(/assets/images/homework/bg-listings-news.png) center center no-repeat;
 	background-size: contain;
+
+	@media screen and (max-width: map.get($breakpoints, "WVGA")) {
+		background: none;
+	}
 }
 
 

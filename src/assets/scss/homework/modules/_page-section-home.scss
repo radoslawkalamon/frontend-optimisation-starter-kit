@@ -1,0 +1,191 @@
+.home-video {
+  aspect-ratio: 16 / 9;
+  display: block;
+  line-height: 0;
+  margin: 0 auto;
+  max-width: 480px;
+  position: relative;
+  width: 100%;
+
+  &__thumbnail {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__btn-play {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+}
+
+.page-section--services {
+  position: relative;
+  overflow: hidden;
+  padding: 4em 0;
+  color: $darkgrey;
+
+  figure {
+    margin-bottom: 20px;
+  }
+
+  .layout > * {
+    padding-bottom: 32222px;
+    margin-bottom: -32222px;
+
+    p {
+      padding-bottom: 80px;
+    }
+
+    .btn {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+.page-section--video {
+  text-align: center;
+}
+
+.page-section--global-map {
+  color: #fff;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, .5);
+  padding-bottom: 2em;
+  text-align: center;
+
+  background:
+    url(/assets/images/homework/map-dotted.png) center center no-repeat,
+    url(/assets/images/homework/bg-sec-grad-lime.svg) top center no-repeat;
+  background-size: auto auto, cover;
+  background-attachment: fixed, scroll;
+
+  .headline-3 {
+    @media screen and (max-width: map.get($breakpoints, "WVGA")) {
+      font-size: 3em;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.page-section--triangle-white {
+  @include triangle();
+
+  &:before {
+    background: url(/assets/images/homework/sec-pointer-white.svg) no-repeat;
+  }
+}
+
+.page-section--triangle-black {
+  @include triangle();
+
+  &:before {
+    background: url(/assets/images/homework/sec-pointer-dark.svg) no-repeat;
+  }
+}
+
+.page-section--network {
+  padding-top: 120px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, .5);
+
+  background:
+    url(/assets/images/homework/bg-sec-fixed-network.png) bottom center no-repeat,
+    url(/assets/images/homework/bg-sec-grad-blue.svg) center center no-repeat;
+  background-size: auto auto, cover;
+
+  @media screen and (max-width: map.get($breakpoints, "WVGA")) {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 120px;
+  }
+
+  .btn {
+    @media screen and (max-width: map.get($breakpoints, "WVGA")) {
+      position: absolute;
+      bottom: -85px;
+      left: 50%;
+      margin-left: -80px;
+    }
+  }
+
+  .headline-2 {
+    color: $white;
+  }
+
+  p {
+    max-width: 410px;
+    margin: 0 auto !important;
+  }
+}
+
+.page-section--home-light-bg {
+  background: #f7f7f7 url(/assets/images/homework/bg-sec-grey-grid.webp) top center no-repeat;
+  color: #999;
+
+  .headline-6,
+  .layout3 .text>p {
+    text-align: center;
+  }
+
+  .headline-6 {
+    color: #4b5258;
+  }
+
+  .layout3 .text>p {
+    max-width: 1090px;
+    margin: 0 auto;
+  }
+}
+
+.page-section--customers {
+  background-image: url('/assets/images/homework/bg-sec-customers.webp');
+  padding-bottom: 2em;
+
+  background-color: #0c8abd;
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  text-align: center;
+
+  .text__bg-blue p {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    margin: 2em auto;
+    max-width: 1024px;
+
+    @media screen and (min-width: map.get($breakpoints, "HVGA")) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    li {
+      display: block;
+
+      img {
+        aspect-ratio: 82 / 45;
+        background-color: rgba($lightblue2, 0.5);
+        border-radius: 5px;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.page-section--customers__learn {
+  .btn {
+    margin-bottom: 0;
+  }
+}

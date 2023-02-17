@@ -12,10 +12,21 @@
 
 
 .l-footer__top {
-	padding: 55px 0 5px 0;
-	border-bottom: 1px solid #125985;
-
 	background: $black;
+	border-bottom: 1px solid #125985;
+	padding: 55px 0 5px 0;
+
+	@media screen and (max-width: map.get($breakpoints, "XGA")) {
+		.col-15,
+		.col-85 {
+			width: 100%;
+			clear: both;
+		}
+	
+		.col-15 {
+			display: none;
+		}
+	}
 }
 
 

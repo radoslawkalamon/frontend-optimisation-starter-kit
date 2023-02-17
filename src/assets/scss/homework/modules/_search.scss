@@ -22,9 +22,16 @@
 		border: 0;
 		padding-bottom: .5em;
 		border-bottom: 2px solid $grey;
-
-		font-size: 5em;
+		font-size: 1.3em;
 		color: #fff;
+
+		@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+			font-size: 3.7em;
+		}
+
+		@media screen and (min-width: map.get($breakpoints, "XGA")) {
+			font-size: 5em;
+		}
 	}
 }
 
@@ -37,15 +44,20 @@
 
 .search__submit {
 	position: absolute;
-	bottom: 70px;
+	bottom: 10px;
 	right: 0;
-
-
 	display: inline-block;
 	@include hidetext();
 	width: 50px;
 	height: 55px;
-
 	background: url(/assets/images/homework/ico-search-large.svg) no-repeat;
 	background-size: 50px 55px;
+
+	@media screen and (min-width: map.get($breakpoints, "WVGA")) {
+		bottom: 45px;
+	}
+
+	@media screen and (min-width: map.get($breakpoints, "XGA")) {
+		bottom: 70px;
+	}
 }

@@ -10,6 +10,7 @@
     
     <style>@font-face{font-family:Montserrat-fallback;size-adjust:112%;src:local("Tahoma")}@font-face{font-family:Montserrat;font-style:normal;src:local("Montserrat"),url("/assets/fonts/montserrat-variable-basic-latin.woff2") format("woff2-variations");font-weight:100 900;font-display:swap;unicode-range:U+0000-007F}</style>
     <link href="/assets/css/homework/app.css" rel="stylesheet" fetchpriority="high" />
+    <link href="/assets/css/homework/home.css" rel="stylesheet" fetchpriority="high" />
 
     <title>Web Dev Insider - Site to Optimise - Homepage</title>
     <link href="/favicon.ico" rel="icon" />
@@ -247,8 +248,8 @@
                 IBAN <span class="label-additional-text">[required]</span>
               </label>
               <div id="iban-element" aria-labelledby="iban-error-message"></div>
-              <div id="iban-bank-name" class="form__bank-name"></div>
-              <div id="iban-error-message" class="form__error-message"></div>
+              <div id="iban-bank-name" class="form__label"></div>
+              <div id="iban-error-message" class="form__label form__label--error"></div>
             </div>
 
             <button class="btn btn--bg-darkblue btn--border-blue" type="submit">Submit Payment</button>
@@ -335,7 +336,7 @@
           </div>
         </section>
         <!-- // -->
-        <section class="page-section page-section--global-map page-section--global-map__home page-section--triangle-white" data-background-lazy-load>
+        <section class="page-section page-section--global-map page-section--triangle-white" data-background-lazy-load>
           <div class="layout">
             <h3 class="headline-3">
               Global cloud-based solution <br />

@@ -50,3 +50,20 @@
 		box-shadow: $button-border-size 1000px 1px $hoverBackgroundColor inset;
 	}
 }
+
+// = Triangle Before Abstract
+// -----------------------------
+@mixin triangle() {
+    &:before {
+        background-size: 34px 14px;
+        content: " ";
+        display: block;
+        height: 14px;
+        left: 50%;
+        margin-left: -17px;        
+        position: absolute;
+        top: 0;
+        width: 34px;
+        z-index: 1;
+    }
+}

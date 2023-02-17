@@ -11,32 +11,21 @@
 /* Layout */
 @import "layout/_navbar";
 @import "layout/_megamenu";
-@import "layout/_shortcuts";
 @import "layout/_main";
-@import "layout/_home";
-@import "layout/_social-media";
 @import "layout/_footer";
 
 /* Modules */
-@import "modules/_ad";
 @import "modules/_text";
 @import "modules/_headlines";
 @import "modules/_btns";
-@import "modules/_btns-arrow";
 @import "modules/_btn-close";
 @import "modules/_social-media";
-@import "modules/_pagination";
 @import "modules/_forms";
 @import "modules/_page-section";
-@import "modules/_slider-full-width";
-@import "modules/_info-box";
 @import "modules/_news-list";
 @import "modules/_item";
 @import "modules/_inner-page";
-@import "modules/_subscription";
 @import "modules/_search";
-@import "modules/_magnific";
-@import "modules/_animation";
 
 [data-background-lazy-load] {
 	background: none !important;
@@ -53,16 +42,6 @@
 	top: 0;
 	width: 100%;
 	z-index: 3000;
-}
-
-.popup-form-container {
-	background-color: #fff;
-	max-width: 600px;
-	width: 90%;
-	margin: 0 auto;
-	padding: 3em;
-	padding-top: 0;
-	position: relative;
 }
 
 .no-scrollbar {
