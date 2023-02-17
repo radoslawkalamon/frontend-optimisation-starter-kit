@@ -52,7 +52,8 @@ const animation = {
   init: () => {
     helpers.initIsVisibleObserver({
       callback: animation.observerCallback,
-      elements: [document.querySelector('.animation')]
+      elements: [document.querySelector('.animation')],
+      threshold: 500
     })
   }
 }

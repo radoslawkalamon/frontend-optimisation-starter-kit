@@ -7,9 +7,8 @@
     <link rel="preload" href="/assets/fonts/montserrat-variable-basic-latin.woff2" as="font" crossorigin fetchpriority="high" type="font/woff2" />
     <link rel="preload" href="/assets/images/homework/logo.svg" as="image" fetchpriority="high" />
     <link rel="preload" href="/assets/videos/video.webp" as="image" fetchpriority="high" />
-    <link rel="preload" href="/assets/images/homework/posts/post2.2x.webp" imagesrcset="/assets/images/homework/posts/post2.1x.webp 1x, /assets/images/homework/posts/post2.2x.webp 2x" as="image" fetchpriority="high" />
-    <link rel="preload" href="/assets/js/homework/vendor/lottie.min.js" as="script" fetchpriority="low" />
-    <link rel="preload" href="/assets/videos/animation.json" as="fetch" crossorigin fetchpriority="low" />
+    <link rel="preload" href="/assets/videos/video.webm" as="video" fetchpriority="high" />
+    <link rel="preload" href="/assets/images/homework/posts/post2.2x.webp" imagesrcset="/assets/images/homework/posts/post2.1x.webp 1x, /assets/images/homework/posts/post2.2x.webp 2x" as="image" fetchpriority="low" />
 
     <style>@font-face{font-family:Montserrat-fallback;size-adjust:112%;src:local("Tahoma")}@font-face{font-family:Montserrat;font-style:normal;src:local("Montserrat"),url("/assets/fonts/montserrat-variable-basic-latin.woff2") format("woff2-variations");font-weight:100 900;font-display:swap;unicode-range:U+0000-007F}</style>
     <link href="/assets/css/homework/app.css" rel="stylesheet" fetchpriority="high" />
@@ -232,6 +231,8 @@
                     srcset="/assets/images/homework/posts/post.1x.webp 1x, /assets/images/homework/posts/post.2x.webp 2x"
                     height="255"
                     width="300"
+                    decoding="async"
+                    loading="lazy"
                     alt=""
                   />
                 </p>
