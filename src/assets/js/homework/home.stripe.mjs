@@ -1,17 +1,14 @@
+import helpers from './_helpers.js'
+
 const paymentForm = {
-  appendStripe: () => new Promise((resolve, reject) => {
-    paymentForm.isStripeAppended = true
-    const scriptEl = document.createElement('script')
-    scriptEl.src = 'https://js.stripe.com/v3/'
-    scriptEl.async = true
-    scriptEl.onload = () => resolve()
-    document.head.appendChild(scriptEl)
-  }),
-  init: async () => {
-    await paymentForm.appendStripe()
-    paymentForm.initStripe()
+  appendStripe: () => {
+    return helpers.appendScript('https://js.stripe.com/v3/')
   },
-  initStripe: function () {
+  setup: async () => {
+    await paymentForm.appendStripe()
+    paymentForm.configureStripe()
+  },
+  configureStripe: () => {
     var form = document.getElementById('payment-form');
     var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
 
@@ -94,9 +91,11 @@ const paymentForm = {
         }
       });
     });
+  },
+  init: () => {
+    document.querySelector('[data-load-stripe]').addEventListener('click', () => paymentForm.setup(), { once: true })
   }
-};
+}
 
-(() => {
-  document.querySelector('[data-load-stripe]').addEventListener('click', () => paymentForm.init(), { once: true })
-})()
+paymentForm.init()
+
