@@ -18,6 +18,7 @@ const animation = {
         loop: true,
         animationData: await animation.fetchJSON()
       })
+      window.player = player
       player.addEventListener('DOMLoaded', () => {
         helpers.initIsVisibleObserver({
           callback: ({ isVisible }) => isVisible ? player.play() : player.stop(),
@@ -27,12 +28,31 @@ const animation = {
       })
     }
   },
-  init: () => {
-    helpers.initIsVisibleObserver({
-      callback: animation.observerCallback,
-      elements: [document.querySelector('.animation')],
-      threshold: 300
-    })
+  createPoster: () => {
+    const el = document.createElement('img')
+    el.ariaHidden = true
+    el.src = '/assets/images/homework/partners-animation-poster.webp'
+    el.decoding = 'async'
+    el.loading = 'lazy'
+    el.alt = ''
+    el.style.aspectRatio = '1 / 1'
+    return el
+  },
+  init: async () => {
+    const element = document.querySelector('.animation')
+    const { level } = await navigator.getBattery()
+    const cpuCount = navigator.hardwareConcurrency
+    const shallStartAnimation = cpuCount >= 4 && level >= 0.2
+
+    if (shallStartAnimation) {
+      helpers.initIsVisibleObserver({
+        callback: animation.observerCallback,
+        elements: [element],
+        threshold: 300
+      })
+    } else {
+      element.appendChild(animation.createPoster())
+    }
   }
 }
 
