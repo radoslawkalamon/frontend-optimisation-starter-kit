@@ -4,7 +4,7 @@
 	article {
 		position: relative;
 		background: #fff;
-		color: #666;
+		color: $grey;
 		overflow: hidden;
 
 		@include box-shadow(0px, 0px, 4px, 0px, rgba(0, 0, 0, 0.1));
@@ -56,7 +56,7 @@
 
 .news-list--main {
 	article {
-		color: #666;
+		color: $grey;
 
 		& > div {
 			padding: 40px 40px 30px 40px;
@@ -75,7 +75,7 @@
 	.headline-2,
 	.headline-7 {
 		a {
-			color: #555;
+			color: $grey;
 
 			&:hover {
 				color: $blue1;

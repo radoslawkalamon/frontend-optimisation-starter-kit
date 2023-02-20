@@ -68,7 +68,7 @@
 		            &:hover {
 		                background-image: url(/assets/images/homework/nav-arrow-down.svg);
 		                background-color: $blue1;
-		                color: #fff;
+		                color: $white;
 		            }
 		        }
 
@@ -76,7 +76,7 @@
 
 		    	&.active {
 				    background-color: $darkgrey;
-				    color: #fff;
+				    color: $white;
 		    	}
 			}
 
@@ -94,7 +94,7 @@
 		    text-transform: uppercase;
 		    letter-spacing: 0.03em;
 
-		    color: #576369;
+		    color: $grey;
 
 		    @include transition(all, 0.2s, ease-in-out);
 
