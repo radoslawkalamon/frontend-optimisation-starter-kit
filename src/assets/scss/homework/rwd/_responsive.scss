@@ -49,11 +49,6 @@
 			}
 		}
 	}
-
-	.news-list__sc-right {
-		top: 25px;
-		right: 25px;
-	}
 }
 
 @media screen and (max-width: map.get($breakpoints, "XGA")) { // 200px - 1020px
@@ -248,12 +243,6 @@
 			}
 		}
 	}
-
-	/* news list */
-		.news-list .social-media--share ul {
-			left: auto !important;
-			right: -9px !important;
-		}
 }
 
 
@@ -360,28 +349,6 @@
 				}
 
 			}
-		}
-	}
-}
-
-@media screen and (max-width: 1200px) {
-	.news-list .social-media--share {
-		vertical-align: middle;
-
-		&	> li {
-			ul {
-				display: none;
-			}
-
-			&:hover ul {
-				display: block;
-			}
-		}
-
-		ul {
-			left: auto;
-			right: -7px;
-			padding-left: 35px;
 		}
 	}
 }

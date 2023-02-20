@@ -122,18 +122,6 @@
 	}
 }
 
-.news-list__sc-right {
-	position: absolute;
-	top: 30px;
-	right: 40px;
-
-
-	& > li ul {
-		right: -8px !important;
-		left: auto !important;
-	}
-}
-
 .news-list__2-cols {
 	article {
 		width: 48%;

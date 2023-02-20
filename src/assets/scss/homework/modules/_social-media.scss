@@ -89,38 +89,27 @@
 }
 
 .social-media--share {
+	$social-media-share-padding: 12px;
 	display: inline-block;
-	margin-left: 5px;
 
 	& > li {
 		position: relative;
 
-		& > a {
-			-ms-touch-action: none;
-			touch-action: none;
-		}
-
 		ul {
+			display: none;
+			gap: $social-media-share-padding;
+
 			position: absolute;
-			top: -65px;
-			left: -5px;
-			z-index: 50;
-			opacity: 0;
-			background: #fff;
-			padding: 5px;
-
-			width: 207px;
+			bottom: -1 * $social-media-share-padding;
+			right: -1 * $social-media-share-padding;
+			z-index: 5;
+			background: $white;
+			padding: $social-media-share-padding;
 			border-radius: 20px;
-			@include transition(all, 0.2s, ease-in);
-
-			li {
-				display: inline-block;
-				margin: 3px 0;
-			}
 		}
 
 		&:hover ul {
-			opacity: 1;
+			display: flex;
 		}
 	}
 }
