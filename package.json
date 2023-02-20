@@ -39,9 +39,7 @@
     "gulp-purgecss": "5.0.0",
     "gulp-sass": "5.1.0",
     "gulp-uglify": "3.0.2",
-    "sass": "1.58.1",
-    "sw-precache": "5.2.1",
-    "sw-toolbox": "3.6.0"
+    "sass": "1.58.1"
   },
   "engines": {
     "node": ">=16.13.0"

@@ -25,8 +25,6 @@ const gulp                      = require('gulp'),
       uglify                    = require('gulp-uglify'),
       browserSync               = require('browser-sync').create(),
       htmlmin                   = require('gulp-htmlmin'),
-      swPrecache                = require('sw-precache'),
-      path                      = require('path'),
       critical                  = require('critical'),
       sass                      = require('gulp-sass')(require('sass')),
       purgecss                  = require('gulp-purgecss'),
@@ -120,37 +118,6 @@ gulp.task('extra-files', () => {
     .pipe(browserSync.stream());
 });
 
-// Copy over the scripts that are used in importScripts as part of the generate-service-worker task.
-gulp.task('copy-sw-scripts', () => {
-  return gulp.src(['node_modules/sw-toolbox/sw-toolbox.js', src_folder + 'sw/runtime-caching.js'])
-    .pipe(gulp.dest(dist_folder + 'assets/js/sw'));
-});
-
-gulp.task('write-service-worker', (cb) => {
-  const filepath = path.join(dist_folder, 'service-worker.js');
-
-  swPrecache.write(filepath, {
-    // Used to avoid cache conflicts when serving on localhost.
-    cacheId: 'optimised-frontend',
-    // sw-toolbox.js needs to be listed first. It sets up methods used in runtime-caching.js.
-    importScripts: [
-      'assets/js/sw/sw-toolbox.js',
-      'assets/js/sw/runtime-caching.js'
-    ],
-    staticFileGlobs: [
-      // Add/remove glob patterns to match your directory setup.
-      `${dist_folder}assets/fonts/*.woff2`,
-      `${dist_folder}assets/css/**/*.css`
-    ],
-    // Translates a static file path to the relative URL that it's served from.
-    // This is '/' rather than path.sep because the paths returned from
-    // glob always use '/'.
-    stripPrefix: dist_folder
-  }, cb);
-});
-
-gulp.task('generate-service-worker', gulp.series('copy-sw-scripts', 'write-service-worker'));
-
 gulp.task('generate-critical-css', (cb) => {
   critical.generate({
     inline: true,
@@ -180,7 +147,6 @@ gulp.task(
     'css-purge',
     'css-minify',
     /*'generate-critical-css',*/
-    /*'generate-service-worker',*/
   )
 );
 
