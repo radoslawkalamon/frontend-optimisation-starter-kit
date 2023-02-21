@@ -110,15 +110,19 @@ const global = {
   },
   initTawk: () => {
     const fakeTawkButton = document.querySelector('[data-hook="fake-tawk"]')
-    fakeTawkButton.addEventListener('click', function () {
-      fakeTawkButton.classList.add('fake-tawk--loading');
+    fakeTawkButton.addEventListener(
+      'click',
+      () => {
+        fakeTawkButton.classList.add('fake-tawk--loading');
 
-      window.Tawk_API = window.Tawk_API || {};
-      window.Tawk_API.onLoad = () => window.Tawk_API.maximize();
-      window.Tawk_API.onChatMaximized = () => fakeTawkButton.remove();
+        window.Tawk_API = window.Tawk_API || {};
+        window.Tawk_API.onLoad = () => window.Tawk_API.maximize();
+        window.Tawk_API.onChatMaximized = () => fakeTawkButton.remove();
 
-      helpers.appendScript('https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default')
-    })
+        helpers.appendScript('https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default')
+      },
+      { once: true }
+    )
   },
   init: () => {
     global.initializeMegaMenu()
