@@ -1,0 +1,41 @@
+@keyframes fake-tawk-animation {
+  from {
+    opacity: 1;
+    transform: scale(1)
+  }
+
+  to {
+    opacity: 0.25;
+    transform: scale(0.75)
+  }
+}
+
+.fake-tawk {
+  align-items: center;
+  background-color: #03a84e;
+  border-radius: 50%;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  padding: 0;
+  position: fixed;
+  right: 24px;
+  width: 60px;
+  z-index: 99;
+
+  &::before {
+    animation: 0.75s ease infinite alternate fake-tawk-animation;
+    animation-play-state: paused;
+    aspect-ratio: 1 / 1;
+    content: url('/assets/images/homework/tawk-icon.svg');
+    display: flex;
+    width: 32px;
+  }
+
+  &--loading {
+    &::before {
+      animation-play-state: running;
+    }
+  }
+}

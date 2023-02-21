@@ -1,4 +1,5 @@
 import './vendor/jquery.min.js'
+import helpers from './_helpers.js'
 
 const global = {
   scrollToID: (id) => {
@@ -107,12 +108,25 @@ const global = {
   addTargetBlankToExternalLinks: () => {
     $('a[rel="external"]').attr('target', '_blank')
   },
+  initTawk: () => {
+    const fakeTawkButton = document.querySelector('[data-hook="fake-tawk"]')
+    fakeTawkButton.addEventListener('click', function () {
+      fakeTawkButton.classList.add('fake-tawk--loading');
+
+      window.Tawk_API = window.Tawk_API || {};
+      window.Tawk_API.onLoad = () => window.Tawk_API.maximize();
+      window.Tawk_API.onChatMaximized = () => fakeTawkButton.remove();
+
+      helpers.appendScript('https://embed.tawk.to/5fc2ba00920fc91564cb9b3c/default')
+    })
+  },
   init: () => {
     global.initializeMegaMenu()
     global.initializeSearchBar()
     global.initializeBurgerMenu()
     global.scrollToHashURL()
     global.addTargetBlankToExternalLinks()
+    global.initTawk()
   }
 }
 
