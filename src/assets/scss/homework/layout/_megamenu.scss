@@ -3,9 +3,8 @@
 	width: 100%;
 	padding: 60px 0;
 	background: #232524;
-	position: relative;
-	height: 100%;
-	z-index: 4000;
+	position: absolute;
+	z-index: 49;
 
 	color: #fff;
 
@@ -18,11 +17,9 @@
 	}
 }
 
-
 .l-megamenu__layer {
 	display: none;
 }
-
 
 .l-megamenu__links {
 	a {
